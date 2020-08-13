@@ -1,0 +1,19 @@
+plugin:
+    name: 'linkonoid.desktopbuilder::lang.plugin.name'
+    description: 'linkonoid.desktopbuilder::lang.plugin.description'
+    author: Linkonoid
+    icon: icon-desktop
+    homepage: 'https://linkonoid.com'
+permissions:
+    linkonoid.backtofront.access_settings:
+        tab: 'linkonoid.desktopbuilder::lang.permissions.tab'
+        label: 'linkonoid.desktopbuilder::lang.permissions.settings'
+navigation:
+    material-type:
+        label: 'Loại vật liệu'
+        url: material-type
+        icon: icon-circle-o-notch
+    material:
+        label: 'Vật liệu'
+        url: material
+        icon: icon-codepen

@@ -1,0 +1,10 @@
+fields:
+    name:
+        label: Tên
+        span: full
+        type: text
+    description:
+        label: 'Mô tả'
+        size: small
+        span: full
+        type: textarea

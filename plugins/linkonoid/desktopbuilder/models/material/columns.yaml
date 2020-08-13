@@ -1,0 +1,26 @@
+columns:
+    name:
+        label: Tên
+        type: text
+        searchable: true
+        sortable: true
+    price:
+        label: Giá
+        type: number
+        searchable: false
+        sortable: true
+    quantity:
+        label: 'Số lượng'
+        type: number
+        sortable: true
+    unit:
+        label: 'Đơn vị'
+        type: text
+    description:
+        label: 'Mô tả'
+        type: text
+        searchable: true
+    total:
+        label: Tổng
+        type: number
+        select: 'price*quantity'

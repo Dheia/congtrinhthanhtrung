@@ -1,0 +1,17 @@
+columns:
+    id:
+        label: STT
+        type: number
+    name:
+        label: Tên
+        type: text
+        searchable: true
+        sortable: true
+    description:
+        label: 'Mô tả'
+        type: text
+        searchable: true
+        sortable: true
+    updated_at:
+        label: 'Cập nhật mới nhất'
+        type: datetime

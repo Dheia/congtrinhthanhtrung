@@ -1,0 +1,78 @@
+tabs:
+    fields:
+        app_name:
+            tab: 'linkonoid.desktopbuilder::lang.settings.tabs.app'
+            label: 'linkonoid.desktopbuilder::lang.settings.fields.app_name'
+            span: auto
+        app_url:
+            tab: 'linkonoid.desktopbuilder::lang.settings.tabs.app'
+            label: 'linkonoid.desktopbuilder::lang.settings.fields.app_url'
+            span: auto
+        app_width:
+            tab: 'linkonoid.desktopbuilder::lang.settings.tabs.app'
+            label: 'linkonoid.desktopbuilder::lang.settings.fields.app_width'
+            span: left
+            type: number
+            default: 1024
+        app_height:
+            tab: 'linkonoid.desktopbuilder::lang.settings.tabs.app'
+            label: 'linkonoid.desktopbuilder::lang.settings.fields.app_height'
+            span: auto
+            type: number
+            default: 768
+        app_resize:
+            tab: 'linkonoid.desktopbuilder::lang.settings.tabs.app'
+            label: 'linkonoid.desktopbuilder::lang.settings.fields.app_resize'
+            span: left
+            type: switch
+        tcp_port:
+            tab: 'linkonoid.desktopbuilder::lang.settings.tabs.protocols'
+            label: 'linkonoid.desktopbuilder::lang.settings.fields.tcp_port'
+            span: auto
+            type: number
+            default: 8080
+        fastcgi_port:
+            tab: 'linkonoid.desktopbuilder::lang.settings.tabs.protocols'
+            label: 'linkonoid.desktopbuilder::lang.settings.fields.fastcgi_port'
+            span: auto
+            type: number
+            default: 9000
+        tcp_port_rand:
+            tab: 'linkonoid.desktopbuilder::lang.settings.tabs.protocols'
+            label: 'linkonoid.desktopbuilder::lang.settings.fields.port_rand'
+            comment: 'linkonoid.desktopbuilder::lang.settings.fields.port_rand_description'
+            span: auto
+            type: switch
+        #server_mode_enable:
+            #tab: 'linkonoid.desktopbuilder::lang.settings.tabs.protocols'
+            #label: 'linkonoid.desktopbuilder::lang.settings.fields.server_mode_enable'
+            #comment: 'linkonoid.desktopbuilder::lang.settings.fields.server_mode_enable_description'
+            #span: auto
+            #type: switch
+            #trigger:
+                #action: hide
+                #field: tcp_port_rand
+                #condition: checked
+        systray_menu:
+            tab: 'linkonoid.desktopbuilder::lang.settings.tabs.systray'
+            label: 'linkonoid.desktopbuilder::lang.settings.fields.systray_menu.label'
+            span: full
+            type: repeater
+            form:
+                fields:
+                    name:
+                         label: 'linkonoid.desktopbuilder::lang.settings.fields.systray_menu.name'
+                         span: full
+                         type: text
+                    type:
+                         label: 'linkonoid.desktopbuilder::lang.settings.fields.systray_menu.type'
+                         span: left
+                         type: dropdown
+                    url:
+                         label: 'linkonoid.desktopbuilder::lang.settings.fields.systray_menu.url'
+                         span: auto
+                         type: text
+                    separator:
+                         label: 'linkonoid.desktopbuilder::lang.settings.fields.systray_menu.separator'
+                         span: left
+                         type: switch

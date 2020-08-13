@@ -1,0 +1,17 @@
+1.0.1:
+    - 'Initialize plugin DesktopBuilder'
+1.0.2:
+    - 'Created table linkonoid_desktopbuilder_material_type'
+    - builder_table_create_linkonoid_desktopbuilder_material_type.php
+1.0.3:
+    - 'Updated table linkonoid_desktopbuilder_material_type'
+    - builder_table_update_linkonoid_desktopbuilder_material_type.php
+1.0.4:
+    - 'Created table linkonoid_desktopbuilder_material'
+    - builder_table_create_linkonoid_desktopbuilder_material.php
+1.0.5:
+    - 'Updated table linkonoid_desktopbuilder_material'
+    - builder_table_update_linkonoid_desktopbuilder_material.php
+1.0.6:
+    - 'Updated table linkonoid_desktopbuilder_material'
+    - builder_table_update_linkonoid_desktopbuilder_material_2.php

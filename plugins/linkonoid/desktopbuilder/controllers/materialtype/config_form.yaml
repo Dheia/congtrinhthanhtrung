@@ -1,0 +1,10 @@
+name: MaterialType
+form: $/linkonoid/desktopbuilder/models/materialtype/fields.yaml
+modelClass: Linkonoid\DesktopBuilder\Models\MaterialType
+defaultRedirect: linkonoid/desktopbuilder/materialtype
+create:
+    redirect: 'linkonoid/desktopbuilder/materialtype/update/:id'
+    redirectClose: linkonoid/desktopbuilder/materialtype
+update:
+    redirect: linkonoid/desktopbuilder/materialtype
+    redirectClose: linkonoid/desktopbuilder/materialtype

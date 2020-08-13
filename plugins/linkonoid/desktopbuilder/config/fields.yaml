@@ -1,0 +1,9 @@
+app_name: ThanhTrungApp
+app_url: /administrator
+app_width: 1024
+app_height: 768
+app_resize: '0'
+tcp_port: 8080
+fastcgi_port: 9000
+tcp_port_rand: '0'
+systray_menu: {  }
