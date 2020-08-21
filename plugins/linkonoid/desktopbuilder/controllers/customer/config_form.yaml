@@ -1,0 +1,10 @@
+name: Customer
+form: $/linkonoid/desktopbuilder/models/customer/fields.yaml
+modelClass: Linkonoid\DesktopBuilder\Models\Customer
+defaultRedirect: linkonoid/desktopbuilder/customer
+create:
+    redirect: 'linkonoid/desktopbuilder/customer/update/:id'
+    redirectClose: linkonoid/desktopbuilder/customer
+update:
+    redirect: linkonoid/desktopbuilder/customer
+    redirectClose: linkonoid/desktopbuilder/customer

@@ -24,6 +24,7 @@ fields:
         showSearch: true
         span: auto
         placeholder: 'Sắt, thép, nhôm,...'
+        required: 1
         trigger:
             action: show
             field: material_type_id

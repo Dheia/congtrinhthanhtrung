@@ -1,0 +1,29 @@
+columns:
+    id:
+        label: STT
+        type: number
+    name:
+        label: 'Tên công trình'
+        type: text
+        searchable: true
+        sortable: true
+    address:
+        label: 'Địa chỉ'
+        type: text
+        searchable: true
+    total:
+        label: 'Uớc tính'
+        type: text
+        searchable: false
+        sortable: true
+    total_paid:
+        label: 'Đã thanh toán'
+        type: text
+        sortable: true
+    remaining_amount:
+        label: 'Còn lại'
+        type: text
+        sortable: true
+    customer_id:
+        label: 'Khách hàng'
+        type: text

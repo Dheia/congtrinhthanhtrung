@@ -1,0 +1,13 @@
+columns:
+    id:
+        label: STT
+        type: number
+    name:
+        label: Tên
+        type: text
+    note:
+        label: 'Ghi chú'
+        type: text
+    total_paid:
+        label: 'Số tiền đã trả'
+        type: text

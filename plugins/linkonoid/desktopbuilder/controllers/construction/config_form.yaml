@@ -1,0 +1,10 @@
+name: Construction
+form: $/linkonoid/desktopbuilder/models/construction/fields.yaml
+modelClass: Linkonoid\DesktopBuilder\Models\Construction
+defaultRedirect: linkonoid/desktopbuilder/construction
+create:
+    redirect: 'linkonoid/desktopbuilder/construction/update/:id'
+    redirectClose: linkonoid/desktopbuilder/construction
+update:
+    redirect: linkonoid/desktopbuilder/construction
+    redirectClose: linkonoid/desktopbuilder/construction

@@ -1,0 +1,10 @@
+name: ConstructionMaterial
+form: $/linkonoid/desktopbuilder/models/constructionmaterial/fields.yaml
+modelClass: Linkonoid\DesktopBuilder\Models\ConstructionMaterial
+defaultRedirect: linkonoid/desktopbuilder/constructionmaterial
+create:
+    redirect: 'linkonoid/desktopbuilder/constructionmaterial/update/:id'
+    redirectClose: linkonoid/desktopbuilder/constructionmaterial
+update:
+    redirect: linkonoid/desktopbuilder/constructionmaterial
+    redirectClose: linkonoid/desktopbuilder/constructionmaterial

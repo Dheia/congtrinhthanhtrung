@@ -1,0 +1,108 @@
+fields:
+    name:
+        label: Tên
+        span: auto
+        required: 1
+        type: text
+    address:
+        label: 'Địa chỉ'
+        span: auto
+        type: text
+    customer_id:
+        label: 'Khách hàng'
+        showSearch: true
+        span: auto
+        required: 1
+        type: dropdown
+    total:
+        label: 'Chi phí ước tính'
+        span: auto
+        required: 1
+        default: '1000'
+        type: number
+    total_paid:
+        label: 'Trả trước'
+        span: auto
+        default: '0'
+        required: 1
+        type: number
+    remaining_amount:
+        label: 'Còn lại'
+        span: auto
+        default: ''
+        readOnly: 1
+        dependsOn:
+            - total
+            - total_paid
+        type: number
+    material:
+        label: 'Vật tư'
+        prompt: 'Thêm mới'
+        maxItems: '100'
+        span: full
+        type: repeater
+        form:
+            fields:
+                material_id:
+                    label: 'Vật liệu'
+                    showSearch: true
+                    span: full
+                    required: 1
+                    type: dropdown
+                material_quantity:
+                    label: 'Số lượng còn lại'
+                    span: auto
+                    readOnly: 1
+                    default: '0'
+                    dependsOn:
+                        - material_id
+                        - material_amount
+                    type: number
+                material_price:
+                    label: 'Giá nhập vào'
+                    span: auto
+                    readOnly: 1
+                    type: number
+                    dependsOn:
+                        - material_id
+                material_amount:
+                    label: 'Số lượng nhập cho công trình'
+                    span: auto
+                    default: '0'
+                    required: 1
+                    type: number
+                    dependsOn:
+                        - material_id
+                material_custom_price:
+                    label: 'Giá bán công trình'
+                    span: auto
+                    default: '0'
+                    readOnly: 0
+                    required: 1
+                    type: number
+                construction_material_paid:
+                    label: 'Tổng tiền chi'
+                    span: auto
+                    readOnly: 1
+                    dependsOn:
+                        - material_id
+                        - material_amount
+                    type: number
+                construction_material_total:
+                    label: 'Tổng tiền thu'
+                    span: auto
+                    readOnly: 1
+                    dependsOn:
+                        - material_id
+                        - material_custom_price
+                    type: number
+                material_revenue:
+                    label: 'Lợi nhuận'
+                    span: auto
+                    readOnly: 1
+                    hidden: 0
+                    dependsOn:
+                        - material_id
+                        - material_custom_price
+                        - material_amount
+                    type: number

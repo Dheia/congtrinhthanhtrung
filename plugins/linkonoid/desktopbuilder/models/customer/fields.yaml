@@ -1,0 +1,15 @@
+fields:
+    name:
+        label: Tên
+        span: auto
+        required: 1
+        type: text
+    total_paid:
+        label: 'Số tiền đã chi'
+        span: auto
+        type: number
+    note:
+        label: 'Ghi chú'
+        size: tiny
+        span: full
+        type: textarea
