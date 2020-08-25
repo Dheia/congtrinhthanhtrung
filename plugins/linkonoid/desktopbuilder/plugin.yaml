@@ -25,8 +25,3 @@ navigation:
         label: 'Công trình'
         url: linkonoid/desktopbuilder/construction
         icon: icon-building-o
-        sideMenu:
-            construction-material:
-                label: 'Vật tư'
-                url: linkonoid/desktopbuilder/constructionmaterial
-                icon: icon-skyatlas

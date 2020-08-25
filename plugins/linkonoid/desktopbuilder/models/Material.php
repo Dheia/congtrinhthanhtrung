@@ -31,6 +31,11 @@ class Material extends Model
         'material_type' => 'linkonoid/desktopbuilder/models/MaterialType',
       ];
 
+    
+      public $belongsToMany = [
+        'construction' => 'linkonoid/desktopbuilder/models/Construction',
+      ];
+
     /**
      * Function get list material type
      */

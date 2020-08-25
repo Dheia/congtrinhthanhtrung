@@ -90,3 +90,24 @@
 1.0.31:
     - 'Updated table linkonoid_desktopbuilder_construction_material'
     - builder_table_update_linkonoid_desktopbuilder_construction_material_18.php
+1.0.32:
+    - 'Created table linkonoid_desktopbuilder_construction_material'
+    - builder_table_create_linkonoid_desktopbuilder_construction_material.php
+1.0.33:
+    - 'Updated table linkonoid_desktopbuilder_construction'
+    - builder_table_update_linkonoid_desktopbuilder_construction.php
+1.0.34:
+    - 'Updated table linkonoid_desktopbuilder_construction'
+    - builder_table_update_linkonoid_desktopbuilder_construction_2.php
+1.0.35:
+    - 'Updated table linkonoid_desktopbuilder_construction'
+    - builder_table_update_linkonoid_desktopbuilder_construction_3.php
+1.0.36:
+    - 'Updated table linkonoid_desktopbuilder_construction'
+    - builder_table_update_linkonoid_desktopbuilder_construction_4.php
+1.0.37:
+    - 'Updated table linkonoid_desktopbuilder_construction'
+    - builder_table_update_linkonoid_desktopbuilder_construction_5.php
+1.0.38:
+    - 'Updated table linkonoid_desktopbuilder_construction'
+    - builder_table_update_linkonoid_desktopbuilder_construction_6.php

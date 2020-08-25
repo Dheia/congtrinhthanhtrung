@@ -7,10 +7,6 @@ columns:
         type: text
         searchable: true
         sortable: true
-    address:
-        label: 'Địa chỉ'
-        type: text
-        searchable: true
     total:
         label: 'Uớc tính'
         type: text
@@ -26,4 +22,11 @@ columns:
         sortable: true
     customer_id:
         label: 'Khách hàng'
+        type: text
+        select: 'name where id = customer_id'
+    total_construction_paid:
+        label: total_construction_paid
+        type: text
+    total_construction_revenue:
+        label: total_construction_revenue
         type: text

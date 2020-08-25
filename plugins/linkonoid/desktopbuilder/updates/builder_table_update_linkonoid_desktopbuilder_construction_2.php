@@ -9,7 +9,7 @@ class BuilderTableUpdateLinkonoidDesktopbuilderConstruction2 extends Migration
     {
         Schema::table('linkonoid_desktopbuilder_construction', function($table)
         {
-            $table->integer('customer_id');
+            $table->renameColumn('constuctor_material', 'construction_material');
         });
     }
     
@@ -17,7 +17,7 @@ class BuilderTableUpdateLinkonoidDesktopbuilderConstruction2 extends Migration
     {
         Schema::table('linkonoid_desktopbuilder_construction', function($table)
         {
-            $table->dropColumn('customer_id');
+            $table->renameColumn('construction_material', 'constuctor_material');
         });
     }
 }

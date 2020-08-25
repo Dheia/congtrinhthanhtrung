@@ -35,7 +35,27 @@ fields:
             - total
             - total_paid
         type: number
-    material:
+    total_construction_paid:
+        label: 'Tổng chi'
+        span: auto
+        default: '0'
+        readOnly: 1
+        type: number
+        dependsOn:
+          - material_id
+          - material_custom_price
+          - material_amount
+    total_construction_revenue:
+        label: 'Tổng lợi nhuận'
+        span: auto
+        default: '0'
+        readOnly: 1
+        type: number
+        dependsOn:
+          - material_id
+          - material_custom_price
+          - material_amount
+    construction_material:
         label: 'Vật tư'
         prompt: 'Thêm mới'
         maxItems: '100'
@@ -44,10 +64,9 @@ fields:
         form:
             fields:
                 material_id:
-                    label: 'Vật liệu'
+                    label: 'Vật tư'
                     showSearch: true
                     span: full
-                    required: 1
                     type: dropdown
                 material_quantity:
                     label: 'Số lượng còn lại'

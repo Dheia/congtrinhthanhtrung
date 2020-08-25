@@ -3,13 +3,13 @@
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class BuilderTableUpdateLinkonoidDesktopbuilderConstruction extends Migration
+class BuilderTableUpdateLinkonoidDesktopbuilderConstruction6 extends Migration
 {
     public function up()
     {
         Schema::table('linkonoid_desktopbuilder_construction', function($table)
         {
-            $table->text('constuctor_material')->nullable();
+            $table->text('construction_material')->nullable();
         });
     }
     
@@ -17,7 +17,7 @@ class BuilderTableUpdateLinkonoidDesktopbuilderConstruction extends Migration
     {
         Schema::table('linkonoid_desktopbuilder_construction', function($table)
         {
-            $table->dropColumn('constuctor_material');
+            $table->dropColumn('construction_material');
         });
     }
 }
