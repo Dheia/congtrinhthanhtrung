@@ -81,4 +81,12 @@
   'linkonoid\\desktopbuilder\\Controllers\\constructionmaterial' => 'plugins/linkonoid/desktopbuilder/controllers/constructionmaterial.php',
   'Linkonoid\\DesktopBuilder\\Models\\ConstructionMaterial' => 'plugins/linkonoid/desktopbuilder/models/ConstructionMaterial.php',
   'RainLab\\Builder\\Classes\\PluginBaseModel' => 'plugins/rainlab/builder/classes/PluginBaseModel.php',
+  'cms\\Controllers\\themes' => 'modules/cms/controllers/themes.php',
+  'backend\\Controllers\\userroles' => 'modules/backend/controllers/userroles.php',
+  'cyd293\\backendskin\\Plugin' => 'plugins/cyd293/backendskin/Plugin.php',
+  'Cyd293\\BackendSkin\\RoutingServiceProvider' => 'plugins/cyd293/backendskin/RoutingServiceProvider.php',
+  'Cyd293\\BackendSkin\\Listener\\PluginEventSubscriber' => 'plugins/cyd293/backendskin/listener/PluginEventSubscriber.php',
+  'Cyd293\\BackendSkin\\Skin\\BackendSkin' => 'plugins/cyd293/backendskin/skin/BackendSkin.php',
+  'Cyd293\\BackendSkin\\Classes\\Skin' => 'plugins/cyd293/backendskin/classes/Skin.php',
+  'Cyd293\\BackendSkin\\Router\\UrlGenerator' => 'plugins/cyd293/backendskin/router/UrlGenerator.php',
 );

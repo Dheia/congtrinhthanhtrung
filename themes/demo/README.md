@@ -22,6 +22,7 @@ This theme doesn't combine assets for performance reasons. To combine the styles
 
 Uncombined stylesheets:
 
+    <link href="{{ 'assets/css/styles.css'|theme }}" rel="stylesheet">
     <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
     <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
 

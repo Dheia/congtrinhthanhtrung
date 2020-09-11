@@ -23,10 +23,10 @@ columns:
     customer_id:
         label: 'Khách hàng'
         type: text
-        select: 'name where id = customer_id'
+        select: name
     total_construction_paid:
-        label: total_construction_paid
+        label: 'Tổng số tiền đã chi'
         type: text
     total_construction_revenue:
-        label: total_construction_revenue
+        label: 'Tổng lợi nhuận'
         type: text

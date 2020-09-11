@@ -26,37 +26,12 @@ class Construction extends Model
 
     protected $jsonable = ['construction_material'];
 
-    // public $belongsToMany = [
-    //   'material' => 'linkonoid/desktopbuilder/models/ConstructionMaterial',
-    //   // 'construction_material' => 'linkonoid/desktopbuilder/models/ConstructionMaterial',
-    // ];
-    // public $belongsTo = [
-    //   'material' => 'linkonoid/desktopbuilder/models/MaterialType',
-    // ];
-    // public function constructionMaterial()
-    // {
-    //   return $this.belongsTo('ConstructionMaterial', 'construction_material');
-    // }
-    
-
-  //   public function materialRevenue(){
-
-  //     $material = Construction::pluck('material');
-  
-  //     $jenkebOptions= [''];
-  //     foreach($material as $item)  {
-  
-  //         // json decoding 
-  //         $decoded = json_decode($item, true);
-  //         foreach($decoded as $innerItem)  {
-  
-  //             // manually filtering
-  //           $jenkebOptions[$innerItem['material_revenue']] = $innerItem['material_revenue'];      
-  //         }
-  //     }
-  
-  //     return $jenkebOptions;
-  // }
+   /**
+     * Defined realation ship with material type
+     */
+    public $belongsTo = [
+      // 'customer' => 'linkonoid/desktopbuilder/models/Customer',
+    ];
 
     /**
      * Function get list customer
@@ -124,35 +99,6 @@ class Construction extends Model
           $fields->total_construction_paid->value = $totalPaid;
           $fields->total_construction_revenue->value = $totalRevenue;
         }
-        // if (!empty($fields->material_revenue->value)) {
-        //   $fields->total_construction_revenue->value = 2;
-
-
-        // } else {
-        //   // $fields->total_construction_revenue = 2;
-
-        // }
-        
-        // if (!empty($fields->material_revenue)) {
-        //   $materialsRevenue = $fields->material_revenue;
-        //     // foreach($materialsRevenue as $mR) {
-        //     //   print_r('<prev>');
-        //     //   print_r($mR);
-        //     // }
-        //   // if (is_array($materialsRevenue)) {
-        //   //   $tmpRev = 0;
-        //   //   foreach($materialsRevenue as $mR) {
-        //   //     print_r($mR);
-        //   //   }
-        //   // }
-        // }
-        // if (!empty($fields)) {
-
-        //   $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
-        //   fwrite($myfile, print_r(json_decode(json_encode($fields), true), true));
-        //   fclose($myfile);
-
-        // }
       }
 
 }
