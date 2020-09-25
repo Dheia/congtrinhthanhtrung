@@ -111,3 +111,21 @@
 1.0.38:
     - 'Updated table linkonoid_desktopbuilder_construction'
     - builder_table_update_linkonoid_desktopbuilder_construction_6.php
+1.0.39:
+    - 'Created table linkonoid_desktopbuilder_employee'
+    - builder_table_create_linkonoid_desktopbuilder_employee.php
+1.0.40:
+    - 'Drop table linkonoid_desktopbuilder_employee'
+    - builder_table_delete_linkonoid_desktopbuilder_employee.php
+1.0.41:
+    - 'Created table linkonoid_desktopbuilder_employee'
+    - builder_table_create_linkonoid_desktopbuilder_employee_2.php
+1.0.42:
+    - 'Drop table linkonoid_desktopbuilder_employee'
+    - builder_table_delete_linkonoid_desktopbuilder_employee_2.php
+1.0.43:
+    - 'Drop table linkonoid_desktopbuilder_construction_material'
+    - builder_table_delete_linkonoid_desktopbuilder_construction_material.php
+1.0.44:
+    - 'Created table linkonoid_desktopbuilder_employee'
+    - builder_table_create_linkonoid_desktopbuilder_employee_3.php

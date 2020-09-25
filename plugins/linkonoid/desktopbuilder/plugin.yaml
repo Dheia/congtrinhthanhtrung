@@ -25,3 +25,7 @@ navigation:
         label: 'Công trình'
         url: linkonoid/desktopbuilder/construction
         icon: icon-building-o
+    employee:
+        label: 'Nhân công'
+        url: linkonoid/desktopbuilder/employee
+        icon: icon-life-ring

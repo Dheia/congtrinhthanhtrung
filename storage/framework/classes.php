@@ -89,4 +89,9 @@
   'Cyd293\\BackendSkin\\Skin\\BackendSkin' => 'plugins/cyd293/backendskin/skin/BackendSkin.php',
   'Cyd293\\BackendSkin\\Classes\\Skin' => 'plugins/cyd293/backendskin/classes/Skin.php',
   'Cyd293\\BackendSkin\\Router\\UrlGenerator' => 'plugins/cyd293/backendskin/router/UrlGenerator.php',
+  'Cyd293\\BackendSkin\\Console\\SetSkinCommand' => 'plugins/cyd293/backendskin/console/SetSkinCommand.php',
+  'linkonoid\\desktopbuilder\\Controllers\\employee' => 'plugins/linkonoid/desktopbuilder/controllers/employee.php',
+  'Linkonoid\\DesktopBuilder\\Models\\Employee' => 'plugins/linkonoid/desktopbuilder/models/Employee.php',
+  'linkonoid\\desktopbuilder\\Controllers\\constructionemployee' => 'plugins/linkonoid/desktopbuilder/controllers/constructionemployee.php',
+  'Linkonoid\\DesktopBuilder\\Models\\ConstructionEmployee' => 'plugins/linkonoid/desktopbuilder/models/ConstructionEmployee.php',
 );

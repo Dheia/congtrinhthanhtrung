@@ -42,9 +42,9 @@ fields:
         readOnly: 1
         type: number
         dependsOn:
-          - material_id
-          - material_custom_price
-          - material_amount
+            - material_id
+            - material_custom_price
+            - material_amount
     total_construction_revenue:
         label: 'Tổng lợi nhuận'
         span: auto
@@ -52,9 +52,9 @@ fields:
         readOnly: 1
         type: number
         dependsOn:
-          - material_id
-          - material_custom_price
-          - material_amount
+            - material_id
+            - material_custom_price
+            - material_amount
     construction_material:
         label: 'Vật tư'
         prompt: 'Thêm mới'
@@ -125,3 +125,9 @@ fields:
                         - material_custom_price
                         - material_amount
                     type: number
+    employees:
+        label: 'Nhân công'
+        nameFrom: employee_name
+        descriptionFrom: description
+        span: auto
+        type: relation

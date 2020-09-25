@@ -1,0 +1,9 @@
+fields:
+    name:
+        label: Tên
+        span: auto
+        type: text
+    base_salary:
+        label: 'Lương cơ bản'
+        span: auto
+        type: number

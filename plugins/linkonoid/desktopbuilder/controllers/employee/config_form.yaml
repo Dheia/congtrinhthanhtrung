@@ -1,0 +1,10 @@
+name: Employee
+form: $/linkonoid/desktopbuilder/models/employee/fields.yaml
+modelClass: Linkonoid\DesktopBuilder\Models\Employee
+defaultRedirect: linkonoid/desktopbuilder/employee
+create:
+    redirect: 'linkonoid/desktopbuilder/employee/update/:id'
+    redirectClose: linkonoid/desktopbuilder/employee
+update:
+    redirect: linkonoid/desktopbuilder/employee
+    redirectClose: linkonoid/desktopbuilder/employee

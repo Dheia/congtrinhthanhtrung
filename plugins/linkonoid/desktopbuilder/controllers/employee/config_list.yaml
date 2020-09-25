@@ -1,0 +1,12 @@
+list: $/linkonoid/desktopbuilder/models/employee/columns.yaml
+modelClass: Linkonoid\DesktopBuilder\Models\Employee
+title: Employee
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'linkonoid/desktopbuilder/employee/update/:id'

@@ -1,0 +1,7 @@
+columns:
+    name:
+        label: name
+        type: text
+    base_salary:
+        label: base_salary
+        type: text

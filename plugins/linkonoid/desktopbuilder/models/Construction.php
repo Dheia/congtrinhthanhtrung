@@ -29,8 +29,14 @@ class Construction extends Model
    /**
      * Defined realation ship with material type
      */
-    public $belongsTo = [
-      // 'customer' => 'linkonoid/desktopbuilder/models/Customer',
+    public $belongsToMany = [
+      'employees' => [
+        'linkonoid/desktopbuilder/models/Employee',
+        'table'    => 'linkonoid_desktopbuilder_construction_employee',
+        // 'key'      => 'construction_id',
+        'order'    => 'employee_name'
+        // 'otherKey' => 'employee_id'
+      ],
     ];
 
     /**
