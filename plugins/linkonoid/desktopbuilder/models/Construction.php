@@ -31,13 +31,15 @@ class Construction extends Model
      */
     public $belongsToMany = [
       'employees' => [
-        'linkonoid/desktopbuilder/models/Employee',
+        'Linkonoid\DesktopBuilder\Models\Employee',
         'table'    => 'linkonoid_desktopbuilder_construction_employee',
-        // 'key'      => 'construction_id',
-        'order'    => 'employee_name'
-        // 'otherKey' => 'employee_id'
+        'pivot'    => ['working_hour'],
       ],
     ];
+
+  //   public $hasMany = [
+  //     'employees' => ['Linkonoid\DesktopBuilder\Models\Employee'],
+  // ];
 
     /**
      * Function get list customer
@@ -51,6 +53,18 @@ class Construction extends Model
         }
         return $result;
     }
+    // /**
+    //  * Function get list customer
+    //  */
+    // public function getEmployeesOptions()
+    // {
+    //     //do whatever you want to do
+    //     $result = [];
+    //     foreach (Employee::all() as $employee) {
+    //         $result[$employee->id] = [$employee->name];
+    //     }
+    //     return $result;
+    // }
 
     /**
      * Function get list material

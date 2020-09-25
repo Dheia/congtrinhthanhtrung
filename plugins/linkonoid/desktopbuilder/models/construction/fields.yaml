@@ -126,8 +126,8 @@ fields:
                         - material_amount
                     type: number
     employees:
-        label: 'Nhân công'
-        nameFrom: employee_name
+        label: Relation
+        nameFrom: name
         descriptionFrom: description
         span: auto
         type: relation

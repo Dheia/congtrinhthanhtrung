@@ -1,0 +1,8 @@
+employees:
+    label: Employee
+    view:
+        list: $/linkonoid/desktopbuilder/models/employee/columns.yaml
+    manage:
+        list: $/linkonoid/desktopbuilder/models/employee/columns.yaml
+    pivot:
+        form: $/linkonoid/desktopbuilder/models/employee/fields.yaml
