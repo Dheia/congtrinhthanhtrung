@@ -55,9 +55,8 @@ class Settings extends Model
 	        'app_resize' => $this->value['app_resize'],
 	        'tcp_port' => $this->value['tcp_port'],
 	        'fastcgi_port' => $this->value['fastcgi_port'],
-          'tcp_port_rand' => $this->value['tcp_port_rand'],
-          // CAUSE ERROR
-	        // 'server_mode_enable' => $this->value['server_mode_enable'],
+	        'tcp_port_rand' => $this->value['tcp_port_rand'],
+	        'server_mode_enable' => $this->value['server_mode_enable'],
 	        'systray_menu' => $systray_menu
         ];
 

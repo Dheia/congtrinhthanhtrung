@@ -40,26 +40,29 @@ fields:
         span: auto
         default: '0'
         readOnly: 1
-        type: number
+        hidden: 1
         dependsOn:
             - material_id
             - material_custom_price
             - material_amount
+        type: number
     total_construction_revenue:
         label: 'Tổng lợi nhuận'
         span: auto
         default: '0'
         readOnly: 1
-        type: number
+        hidden: 1
         dependsOn:
             - material_id
             - material_custom_price
             - material_amount
+        type: number
     construction_material:
         label: 'Vật tư'
         prompt: 'Thêm mới'
         maxItems: '100'
         span: full
+        hidden: 1
         type: repeater
         form:
             fields:
@@ -125,9 +128,3 @@ fields:
                         - material_custom_price
                         - material_amount
                     type: number
-    employees:
-        label: Relation
-        nameFrom: name
-        descriptionFrom: description
-        span: auto
-        type: relation

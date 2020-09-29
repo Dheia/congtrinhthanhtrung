@@ -8,24 +8,3 @@ permissions:
     linkonoid.backtofront.access_settings:
         tab: 'linkonoid.desktopbuilder::lang.permissions.tab'
         label: 'linkonoid.desktopbuilder::lang.permissions.settings'
-navigation:
-    material-type:
-        label: 'Loại vật liệu'
-        url: linkonoid/desktopbuilder/materialtype
-        icon: icon-circle-o-notch
-    material:
-        label: 'Vật liệu'
-        url: linkonoid/desktopbuilder/material
-        icon: icon-codepen
-    customer:
-        label: 'Khách hàng'
-        url: linkonoid/desktopbuilder/customer
-        icon: icon-users
-    construction:
-        label: 'Công trình'
-        url: linkonoid/desktopbuilder/construction
-        icon: icon-building-o
-    employee:
-        label: 'Nhân công'
-        url: linkonoid/desktopbuilder/employee
-        icon: icon-life-ring
