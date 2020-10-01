@@ -1,0 +1,36 @@
+columns:
+    code:
+        label: 'Mã vật liệu'
+        type: text
+        searchable: true
+        sortable: true
+    name:
+        label: 'Tên vật liệu'
+        type: text
+        searchable: true
+        sortable: true
+    material_type_id:
+        label: 'Loại vật liệu'
+        type: text
+        searchable: true
+        sortable: true
+        select: name
+        relation: material_type
+    pivot[custom_amount]:
+        label: 'Số lượng nhập'
+        type: text
+        searchable: true
+        sortable: true
+    total_weight:
+        label: 'Trọng lượng'
+        type: text
+        searchable: true
+        sortable: true
+    pivot[custom_price]:
+        label: 'Giá xuất'
+        type: text
+        searchable: true
+        sortable: true
+    pivot[description]:
+        label: 'Mô tả'
+        type: text

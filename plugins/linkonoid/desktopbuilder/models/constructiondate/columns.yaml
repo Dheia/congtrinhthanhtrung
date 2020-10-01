@@ -1,0 +1,7 @@
+columns:
+    construction_id:
+        label: construction_id
+        type: number
+    date:
+        label: date
+        type: text

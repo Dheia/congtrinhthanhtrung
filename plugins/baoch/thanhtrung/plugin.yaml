@@ -1,0 +1,32 @@
+plugin:
+    name: 'baoch.thanhtrung::lang.plugin.name'
+    description: 'baoch.thanhtrung::lang.plugin.description'
+    author: baoch
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    cong-trinh:
+        label: 'Báo cáo công trình'
+        url: baoch/thanhtrung/constructiondate
+        icon: icon-area-chart
+        sideMenu:
+            construction:
+                label: 'Công trình'
+                url: baoch/thanhtrung/construction
+                icon: icon-hospital-o
+            material-type:
+                label: 'Loại vật liệu'
+                url: baoch/thanhtrung/materialtype
+                icon: icon-space-shuttle
+            material:
+                label: 'Vật liệu'
+                url: baoch/thanhtrung/material
+                icon: icon-spoon
+            employee:
+                label: 'Nhân công'
+                url: baoch/thanhtrung/employee
+                icon: icon-user-md
+    customer:
+        label: 'Khách hàng'
+        url: baoch/thanhtrung/customer
+        icon: icon-users

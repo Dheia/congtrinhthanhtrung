@@ -1,0 +1,16 @@
+columns:
+    name:
+        label: 'Tên nhân viên'
+        type: text
+        searchable: true
+        sortable: true
+    mobile:
+        label: 'Số điện thoại'
+        type: text
+        searchable: true
+        sortable: true
+    base_salary:
+        label: 'Lương căn bản'
+        type: text
+        searchable: true
+        sortable: true

@@ -1,0 +1,57 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+materials:
+    label: 'Quản lý Vật liệu'
+    view:
+        list: ~/plugins/baoch/thanhtrung/models/material/columns.yaml
+        showSearch: true
+    manage:
+        list: ~/plugins/baoch/thanhtrung/models/material/columns.yaml
+        form: ~/plugins/baoch/thanhtrung/models/material/fields.yaml
+materials_pivot:
+    label: 'Vật liệu'
+    view:
+        list: ~/plugins/baoch/thanhtrung/models/constructiondatematerial/columns.yaml
+        showSearch: true
+    manage:
+        list: ~/plugins/baoch/thanhtrung/models/material/columns.yaml
+    pivot:
+        form: ~/plugins/baoch/thanhtrung/models/constructiondatematerial/fields.yaml
+employees:
+    label: 'Quản lý Nhân công'
+    view:
+        list: ~/plugins/baoch/thanhtrung/models/employee/columns.yaml
+        showSearch: true
+    manage:
+        list: ~/plugins/baoch/thanhtrung/models/employee/columns.yaml
+        form: ~/plugins/baoch/thanhtrung/models/employee/fields.yaml
+employees_pivot:
+    label: 'Nhân công'
+    view:
+        list: ~/plugins/baoch/thanhtrung/models/constructiondateemployee/columns.yaml
+        showSearch: true
+    manage:
+        list: ~/plugins/baoch/thanhtrung/models/employee/columns.yaml
+    pivot:
+        form: ~/plugins/baoch/thanhtrung/models/constructiondateemployee/fields.yaml
+# roles_pivot:
+#     label: Role
+#     view:
+#         list: ~/plugins/october/test/models/userrolepivot/columns.yaml
+#         showSearch: true
+#     manage:
+#         list: ~/plugins/october/test/models/role/columns.yaml
+#     pivot:
+#         form: ~/plugins/october/test/models/userrolepivot/fields.yaml
+
+# roles_pivot_model:
+#     label: Role
+#     view:
+#         list: ~/plugins/october/test/models/userrolepivot/columns.yaml
+#         showSearch: true
+#     manage:
+#         list: ~/plugins/october/test/models/role/columns.yaml
+#     pivot:
+#         form: ~/plugins/october/test/models/userrolepivot/fields.yaml

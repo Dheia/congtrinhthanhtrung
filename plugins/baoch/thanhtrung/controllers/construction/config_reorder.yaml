@@ -1,0 +1,4 @@
+title: Construction
+modelClass: Baoch\Thanhtrung\Models\Construction
+toolbar:
+    buttons: reorder_toolbar

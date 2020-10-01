@@ -1,0 +1,29 @@
+fields:
+    name:
+        label: Tên
+        span: auto
+        type: text
+    customer_id:
+        label: 'Khách hàng'
+        showSearch: true
+        span: auto
+        type: dropdown
+    address:
+        label: 'Địa chỉ'
+        span: full
+        type: text
+    estimated_price:
+        label: 'Số tiền ước tính'
+        span: auto
+        default: '0'
+        type: number
+    prepaid:
+        label: 'Trả trước'
+        span: auto
+        default: '0'
+        type: number
+    description:
+        label: 'Ghi chú'
+        size: small
+        span: full
+        type: textarea

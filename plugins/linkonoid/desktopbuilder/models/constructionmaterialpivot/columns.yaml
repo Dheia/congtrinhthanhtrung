@@ -1,0 +1,13 @@
+columns:
+    construction_id:
+        label: construction_id
+        type: number
+    material_id:
+        label: material_id
+        type: number
+    custom_price:
+        label: custom_price
+        type: text
+    amount:
+        label: amount
+        type: text

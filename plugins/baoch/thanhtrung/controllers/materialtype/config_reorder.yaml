@@ -1,0 +1,4 @@
+title: MaterialType
+modelClass: Baoch\Thanhtrung\Models\MaterialType
+toolbar:
+    buttons: reorder_toolbar

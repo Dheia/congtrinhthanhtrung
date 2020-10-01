@@ -1,0 +1,14 @@
+columns:
+    construction_name:
+        label: 'Công trình'
+        type: number
+        select: name
+        relation: construction
+    customer:
+        label: 'Khách hàng'
+        type: text
+        select: customer_id
+        relation: construction
+    date:
+        label: date
+        type: text

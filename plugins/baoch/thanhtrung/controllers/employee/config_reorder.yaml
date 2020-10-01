@@ -1,0 +1,4 @@
+title: Employee
+modelClass: Baoch\Thanhtrung\Models\Employee
+toolbar:
+    buttons: reorder_toolbar

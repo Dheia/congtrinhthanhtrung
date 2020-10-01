@@ -1,0 +1,26 @@
+columns:
+    name:
+        label: 'Tên'
+        type: text
+        searchable: true
+        sortable: true
+    mobile:
+        label: 'Số điện thoại'
+        type: text
+        searchable: true
+        sortable: true
+    pivot[working_hour]:
+        label: 'Giờ làm việc trong ngày'
+        type: text
+        searchable: true
+        sortable: true
+    pivot[custom_salary]:
+        label: 'Lương/giờ'
+        type: text
+        searchable: true
+        sortable: true
+    pivot[description]:
+        label: 'Mô tả'
+        type: text
+        searchable: true
+        sortable: true

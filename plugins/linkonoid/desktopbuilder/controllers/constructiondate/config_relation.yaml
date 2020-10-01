@@ -1,0 +1,50 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+materials:
+    label: 'Quản lý Vật liệu'
+    view:
+        list: ~/plugins/linkonoid/desktopbuilder/models/material/columns.yaml
+        showSearch: true
+    manage:
+        list: ~/plugins/linkonoid/desktopbuilder/models/material/columns.yaml
+        form: ~/plugins/linkonoid/desktopbuilder/models/material/fields.yaml
+
+construction_materials_pivot:
+    label: 'Vật liệu'
+    view:
+        list: ~/plugins/linkonoid/desktopbuilder/models/constructionmaterialpivot/columns.yaml
+        showSearch: true
+    manage:
+        list: ~/plugins/linkonoid/desktopbuilder/models/constructionmaterialpivot/columns.yaml
+        form: ~/plugins/linkonoid/desktopbuilder/models/constructionmaterialpivot/fields.yaml
+
+employees:
+    label: 'Quản lý Nhân công'
+    view:
+        list: ~/plugins/linkonoid/desktopbuilder/models/employee/columns.yaml
+        showSearch: true
+    manage:
+        list: ~/plugins/linkonoid/desktopbuilder/models/employee/columns.yaml
+        form: ~/plugins/linkonoid/desktopbuilder/models/employee/fields.yaml
+
+# roles_pivot:
+#     label: Role
+#     view:
+#         list: ~/plugins/october/test/models/userrolepivot/columns.yaml
+#         showSearch: true
+#     manage:
+#         list: ~/plugins/october/test/models/role/columns.yaml
+#     pivot:
+#         form: ~/plugins/october/test/models/userrolepivot/fields.yaml
+
+# roles_pivot_model:
+#     label: Role
+#     view:
+#         list: ~/plugins/october/test/models/userrolepivot/columns.yaml
+#         showSearch: true
+#     manage:
+#         list: ~/plugins/october/test/models/role/columns.yaml
+#     pivot:
+#         form: ~/plugins/october/test/models/userrolepivot/fields.yaml

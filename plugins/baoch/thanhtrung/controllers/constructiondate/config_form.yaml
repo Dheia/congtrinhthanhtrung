@@ -1,0 +1,10 @@
+name: ConstructionDate
+form: $/baoch/thanhtrung/models/constructiondate/fields.yaml
+modelClass: Baoch\Thanhtrung\Models\ConstructionDate
+defaultRedirect: baoch/thanhtrung/constructiondate
+create:
+    redirect: 'baoch/thanhtrung/constructiondate/update/:id'
+    redirectClose: baoch/thanhtrung/constructiondate
+update:
+    redirect: baoch/thanhtrung/constructiondate
+    redirectClose: baoch/thanhtrung/constructiondate

@@ -1,0 +1,10 @@
+name: Construction
+form: $/baoch/thanhtrung/models/construction/fields.yaml
+modelClass: Baoch\Thanhtrung\Models\Construction
+defaultRedirect: baoch/thanhtrung/construction
+create:
+    redirect: 'baoch/thanhtrung/construction/update/:id'
+    redirectClose: baoch/thanhtrung/construction
+update:
+    redirect: baoch/thanhtrung/construction
+    redirectClose: baoch/thanhtrung/construction

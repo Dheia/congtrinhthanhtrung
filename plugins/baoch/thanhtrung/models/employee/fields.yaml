@@ -1,0 +1,18 @@
+fields:
+    name:
+        label: Tên
+        span: full
+        type: text
+    mobile:
+        label: 'Số điện thoại'
+        span: auto
+        type: text
+    base_salary:
+        label: 'Lương căn bản'
+        span: auto
+        type: number
+    description:
+        label: 'Ghi chú'
+        size: small
+        span: full
+        type: textarea

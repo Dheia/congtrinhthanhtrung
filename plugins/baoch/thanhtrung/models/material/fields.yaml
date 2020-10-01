@@ -1,0 +1,39 @@
+fields:
+    code:
+        label: 'Mã vật liệu'
+        span: auto
+        type: text
+    name:
+        label: Tên
+        span: auto
+        type: text
+    material_type_id:
+        label: 'Loại vật liệu'
+        showSearch: true
+        span: auto
+        type: dropdown
+    color:
+        label: 'Màu sắc'
+        span: auto
+        type: text
+    amount:
+        label: 'Số lượng'
+        span: auto
+        type: number
+    total_weight:
+        label: 'Trọng lượng'
+        span: auto
+        type: number
+    purchase_price:
+        label: 'Đơn giá'
+        span: auto
+        type: number
+    sale_price:
+        label: 'Giá xuất căn bản'
+        span: auto
+        type: number
+    description:
+        label: 'Mô tả'
+        size: small
+        span: full
+        type: textarea

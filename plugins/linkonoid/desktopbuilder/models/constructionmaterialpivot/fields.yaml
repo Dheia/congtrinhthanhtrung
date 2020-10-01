@@ -1,0 +1,19 @@
+fields:
+    # material_id:
+    #     label: 'Vật liệu'
+    #     showSearch: true
+    #     span: full
+    #     type: dropdown
+    pivot[custom_price]:
+        label: Giá
+        span: auto
+        type: number
+    pivot[amount]:
+        label: 'Số lượng'
+        span: auto
+        type: number
+    # construction_id:
+    #     label: 'Công trình'
+    #     span: auto
+    #     hidden: 1
+    #     type: text

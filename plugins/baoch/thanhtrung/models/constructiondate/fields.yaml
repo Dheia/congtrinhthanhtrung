@@ -1,0 +1,74 @@
+fields:
+    construction_id:
+        label: 'Công trình'
+        showSearch: true
+        span: auto
+        type: dropdown
+    date:
+        label: Ngày
+        mode: date
+        span: auto
+        default: now
+        type: datepicker
+tabs:
+    fields:
+        # materials:
+        #     context:
+        #         - create
+        #         - update
+        #         - relationcontroller
+        #     label: 'Quản lý vật liệu'
+        #     commentAbove: 'Chọn vật liệu nhập vào'
+        #     type: partial
+        #     tab: 'Quản lý vật liệu'
+        materials_pivot:
+            context:
+                - update
+                - relationcontroller
+            label: 'Vật liệu xây dựng'
+            commentAbove: 'Chọn vật liệu nhập vào'
+            type: partial
+            tab: 'Vật liệu'
+        # employees:
+        #     context:
+        #         - create
+        #         - update
+        #         - relationcontroller
+        #     label: 'Quản lý nhân công'
+        #     commentAbove: 'Thêm nhân công vào ngày hôm nay'
+        #     type: partial
+        #     tab: 'Quản lý nhân công'
+        employees_pivot:
+            context:
+                - update
+                - relationcontroller
+            label: 'Nhân công cho công trình'
+            commentAbove: 'Thêm nhân công vào ngày hôm nay'
+            type: partial
+            tab: 'Nhân công'
+        paid_or_received:
+            context:
+                - update
+            label: 'Khoản thu chi'
+            prompt: 'Thêm 1 khoản thu chi mới'
+            span: full
+            type: repeater
+            tab: 'Chi tiêu khác'
+            form:
+                fields:
+                    isPaid:
+                        label: 'Loại'
+                        options:
+                            chi: Chi
+                            thu: Thu
+                        span: auto
+                        type: radio
+                    price:
+                        label: 'Số tiền'
+                        span: auto
+                        type: number
+                    description:
+                        label: 'Nội dung'
+                        size: small
+                        span: full
+                        type: textarea

@@ -1,0 +1,12 @@
+list: $/baoch/thanhtrung/models/construction/columns.yaml
+modelClass: Baoch\Thanhtrung\Models\Construction
+title: Construction
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'baoch/thanhtrung/construction/update/:id'

@@ -1,0 +1,10 @@
+name: ConstructionDate
+form: $/linkonoid/desktopbuilder/models/constructiondate/fields.yaml
+modelClass: Linkonoid\DesktopBuilder\Models\ConstructionDate
+defaultRedirect: linkonoid/desktopbuilder/constructiondate
+create:
+    redirect: 'linkonoid/desktopbuilder/constructiondate/update/:id'
+    redirectClose: linkonoid/desktopbuilder/constructiondate
+update:
+    redirect: linkonoid/desktopbuilder/constructiondate
+    redirectClose: linkonoid/desktopbuilder/constructiondate

@@ -9,3 +9,63 @@
 1.0.4:
     - 'Updated table linkonoid_desktopbuilder_construction_date'
     - builder_table_update_linkonoid_desktopbuilder_construction_date.php
+1.0.5:
+    - 'Updated table linkonoid_desktopbuilder_employee'
+    - builder_table_update_linkonoid_desktopbuilder_employee.php
+1.0.6:
+    - 'Updated table linkonoid_desktopbuilder_construction_employee_pivot'
+    - builder_table_update_linkonoid_desktopbuilder_construction_employee_pivot_2.php
+1.0.7:
+    - 'Updated table linkonoid_desktopbuilder_construction_date'
+    - builder_table_update_linkonoid_desktopbuilder_construction_date_2.php
+1.0.8:
+    - 'Updated table linkonoid_desktopbuilder_construction_material_pivot'
+    - builder_table_update_linkonoid_desktopbuilder_construction_material_pivot.php
+1.0.9:
+    - 'Updated table linkonoid_desktopbuilder_construction_material_pivot'
+    - builder_table_update_linkonoid_desktopbuilder_construction_material_pivot_2.php
+1.0.10:
+    - 'Updated table linkonoid_desktopbuilder_construction'
+    - builder_table_update_linkonoid_desktopbuilder_construction_7.php
+1.0.11:
+    - 'Updated table linkonoid_desktopbuilder_construction_employee_pivot'
+    - builder_table_update_linkonoid_desktopbuilder_construction_employee_pivot_3.php
+1.0.12:
+    - 'Updated table linkonoid_desktopbuilder_construction_material_pivot'
+    - builder_table_update_linkonoid_desktopbuilder_construction_material_pivot_3.php
+1.0.13:
+    - 'Updated table linkonoid_desktopbuilder_customer'
+    - builder_table_update_linkonoid_desktopbuilder_customer.php
+1.0.14:
+    - 'Updated table linkonoid_desktopbuilder_employee'
+    - builder_table_update_linkonoid_desktopbuilder_employee_2.php
+1.0.15:
+    - 'Updated table linkonoid_desktopbuilder_material'
+    - builder_table_update_linkonoid_desktopbuilder_material.php
+1.0.16:
+    - 'Updated table linkonoid_desktopbuilder_material_type'
+    - builder_table_update_linkonoid_desktopbuilder_material_type.php
+1.0.17:
+    - 'Updated table linkonoid_desktopbuilder_construction'
+    - builder_table_update_linkonoid_desktopbuilder_construction_8.php
+1.0.18:
+    - 'Updated table linkonoid_desktopbuilder_construction_employee_pivot'
+    - builder_table_update_linkonoid_desktopbuilder_construction_employee_pivot_4.php
+1.0.19:
+    - 'Updated table linkonoid_desktopbuilder_construction_material_pivot'
+    - builder_table_update_linkonoid_desktopbuilder_construction_material_pivot_4.php
+1.0.20:
+    - 'Updated table linkonoid_desktopbuilder_customer'
+    - builder_table_update_linkonoid_desktopbuilder_customer_2.php
+1.0.21:
+    - 'Updated table linkonoid_desktopbuilder_employee'
+    - builder_table_update_linkonoid_desktopbuilder_employee_3.php
+1.0.22:
+    - 'Updated table linkonoid_desktopbuilder_material'
+    - builder_table_update_linkonoid_desktopbuilder_material_2.php
+1.0.23:
+    - 'Updated table linkonoid_desktopbuilder_material_type'
+    - builder_table_update_linkonoid_desktopbuilder_material_type_2.php
+1.0.24:
+    - 'Updated table linkonoid_desktopbuilder_construction_date'
+    - builder_table_update_linkonoid_desktopbuilder_construction_date_3.php

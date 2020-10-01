@@ -1,0 +1,21 @@
+columns:
+    name:
+        label: 'Tên khách hàng'
+        type: text
+        searchable: true
+        sortable: true
+    mobile:
+        label: 'Số điện thoại'
+        type: text
+        searchable: true
+        sortable: true
+    email:
+        label: Email
+        type: text
+        searchable: true
+        sortable: true
+    total_paid:
+        label: 'Số tiền đã chi'
+        type: text
+        searchable: true
+        sortable: true

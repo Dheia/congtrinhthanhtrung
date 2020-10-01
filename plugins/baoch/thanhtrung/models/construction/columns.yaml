@@ -1,0 +1,23 @@
+columns:
+    name:
+        label: 'Tên Công trình'
+        type: text
+        searchable: true
+    address:
+        label: 'Địa chỉ'
+        type: text
+        searchable: true
+    estimated_price:
+        label: 'Ước tính'
+        type: text
+        searchable: true
+    prepaid:
+        label: 'Trả trước'
+        type: text
+        searchable: true
+    customer_name:
+        label: 'Khách hàng'
+        type: text
+        searchable: true
+        select: name
+        relation: customer

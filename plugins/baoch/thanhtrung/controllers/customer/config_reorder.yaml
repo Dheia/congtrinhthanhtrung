@@ -1,0 +1,4 @@
+title: Customer
+modelClass: Baoch\Thanhtrung\Models\Customer
+toolbar:
+    buttons: reorder_toolbar

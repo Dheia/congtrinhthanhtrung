@@ -1,0 +1,4 @@
+title: ConstructionDate
+modelClass: Linkonoid\DesktopBuilder\Models\ConstructionDate
+toolbar:
+    buttons: reorder_toolbar

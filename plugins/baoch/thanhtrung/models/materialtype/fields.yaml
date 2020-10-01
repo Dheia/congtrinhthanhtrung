@@ -1,0 +1,10 @@
+fields:
+    name:
+        label: Tên
+        span: full
+        type: text
+    description:
+        label: 'Ghi chú'
+        size: small
+        span: full
+        type: textarea

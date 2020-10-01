@@ -1,0 +1,71 @@
+fields:
+    construction_id:
+        label: 'Công trình'
+        showSearch: true
+        span: auto
+        type: dropdown
+    date:
+        label: Ngày
+        mode: date
+        span: auto
+        default: now
+        type: datepicker
+tabs:
+    fields:
+        # construction_materials_pivot:
+        #     context:
+        #         - create
+        #         - update
+        #         - relationcontroller
+        #     label: 'Vật liệu xây dựng'
+        #     commentAbove: 'Chọn vật liệu nhập vào'
+        #     type: partial
+        #     tab: 'Vật liệu'
+        # employees:
+        #     context:
+        #         - create
+        #         - update
+        #         - relationcontroller
+        #     label: 'Nhân công cho công trình'
+        #     commentAbove: 'Thêm nhân công vào ngày hôm nay'
+        #     type: partial
+        #     tab: 'Nhân công'
+        received_or_paid:
+            label: 'Thu chi'
+            prompt: 'Add new item'
+            span: full
+            type: repeater
+            tab: Khác
+            form:
+                fields:
+                    type:
+                        label: 'Thu hay chi'
+                        options:
+                            thu: Thu
+                            chi: Chi
+                        span: auto
+                        type: radio
+                    description:
+                        label: 'Nội dung'
+                        span: auto
+                        type: text
+secondaryTabs:
+    fields:
+        materials:
+            context:
+                - create
+                - update
+                - relationcontroller
+            label: 'Vật liệu xây dựng'
+            commentAbove: 'Chọn vật liệu nhập vào'
+            type: partial
+            tab: 'Vật liệu'
+        employees:
+            context:
+                - create
+                - update
+                - relationcontroller
+            label: 'Nhân công cho công trình'
+            commentAbove: 'Thêm nhân công vào ngày hôm nay'
+            type: partial
+            tab: 'Nhân công'

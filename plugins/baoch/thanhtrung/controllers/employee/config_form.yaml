@@ -1,0 +1,10 @@
+name: Employee
+form: $/baoch/thanhtrung/models/employee/fields.yaml
+modelClass: Baoch\Thanhtrung\Models\Employee
+defaultRedirect: baoch/thanhtrung/employee
+create:
+    redirect: 'baoch/thanhtrung/employee/update/:id'
+    redirectClose: baoch/thanhtrung/employee
+update:
+    redirect: baoch/thanhtrung/employee
+    redirectClose: baoch/thanhtrung/employee

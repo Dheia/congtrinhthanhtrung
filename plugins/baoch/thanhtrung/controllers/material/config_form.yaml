@@ -1,0 +1,10 @@
+name: Material
+form: $/baoch/thanhtrung/models/material/fields.yaml
+modelClass: Baoch\Thanhtrung\Models\Material
+defaultRedirect: baoch/thanhtrung/material
+create:
+    redirect: 'baoch/thanhtrung/material/update/:id'
+    redirectClose: baoch/thanhtrung/material
+update:
+    redirect: baoch/thanhtrung/material
+    redirectClose: baoch/thanhtrung/material

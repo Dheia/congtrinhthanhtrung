@@ -1,0 +1,38 @@
+columns:
+    code:
+        label: Mã
+        type: text
+        searchable: true
+        sortable: true
+    name:
+        label: 'Tên vật liệu'
+        type: number
+        searchable: true
+        sortable: true
+    material_type_id:
+        label: 'Loại vật liệu'
+        type: text
+        searchable: true
+        sortable: true
+        select: name
+        relation: material_type
+    color:
+        label: 'Màu sắc'
+        type: text
+        searchable: true
+        sortable: true
+    amount:
+        label: 'Số lượng còn lại'
+        type: text
+        searchable: true
+        sortable: true
+    total_weight:
+        label: 'Trọng lượng'
+        type: text
+        searchable: true
+        sortable: true
+    purchase_price:
+        label: 'Đơn giá'
+        type: text
+        searchable: true
+        sortable: true

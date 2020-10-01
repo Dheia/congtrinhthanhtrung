@@ -1,0 +1,10 @@
+name: Customer
+form: $/baoch/thanhtrung/models/customer/fields.yaml
+modelClass: Baoch\Thanhtrung\Models\Customer
+defaultRedirect: baoch/thanhtrung/customer
+create:
+    redirect: 'baoch/thanhtrung/customer/update/:id'
+    redirectClose: baoch/thanhtrung/customer
+update:
+    redirect: baoch/thanhtrung/customer
+    redirectClose: baoch/thanhtrung/customer

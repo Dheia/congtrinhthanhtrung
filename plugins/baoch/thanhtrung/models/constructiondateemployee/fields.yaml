@@ -1,0 +1,14 @@
+fields:
+    pivot[working_hour]:
+        label: 'Số giờ làm việc'
+        span: auto
+        type: number
+    pivot[custom_salary]:
+        label: 'Lương'
+        span: auto
+        type: number
+    pivot[description]:
+        label: 'Mô tả'
+        size: small
+        span: full
+        type: textarea

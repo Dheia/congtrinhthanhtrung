@@ -1,0 +1,12 @@
+columns:
+    name:
+        label: 'Loại vật liệu'
+        type: text
+        searchable: true
+        invisible: false
+        sortable: true
+    description:
+        label: 'Ghi chú'
+        type: text
+        searchable: true
+        sortable: true

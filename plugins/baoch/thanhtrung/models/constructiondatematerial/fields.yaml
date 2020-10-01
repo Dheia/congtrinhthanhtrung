@@ -1,0 +1,14 @@
+fields:
+    pivot[custom_amount]:
+        label: 'Số lượng'
+        span: auto
+        type: number
+    pivot[custom_price]:
+        label: 'Giá'
+        span: auto
+        type: number
+    pivot[description]:
+        label: 'Mô tả'
+        size: small
+        span: full
+        type: textarea

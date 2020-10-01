@@ -1,0 +1,24 @@
+fields:
+    name:
+        label: 'Tên khách hàng'
+        span: auto
+        type: text
+    mobile:
+        label: 'Số điện thoại'
+        span: auto
+        type: text
+    email:
+        label: Email
+        span: auto
+        type: text
+    total_paid:
+        label: 'Số tiền đã chi'
+        span: auto
+        default: '0'
+        readOnly: 1
+        type: number
+    note:
+        label: 'Ghi chú'
+        size: large
+        span: full
+        type: textarea
