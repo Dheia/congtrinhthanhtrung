@@ -49,7 +49,7 @@ return [
     |
     */
 
-    'backendForceSecure' => false,
+    'backendForceSecure' => null,
 
     /*
     |--------------------------------------------------------------------------
@@ -156,7 +156,7 @@ return [
     |
     */
 
-    'enableRoutesCache' => false,
+    'enableRoutesCache' => env('ROUTES_CACHE', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -196,7 +196,7 @@ return [
     |
     */
 
-    'enableAssetCache' => false,
+    'enableAssetCache' => env('ASSET_CACHE', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -313,9 +313,9 @@ return [
     'storage' => [
 
         'uploads' => [
-            'disk'            => 'local',
-            'folder'          => 'uploads',
-            'path'            => '/storage/app/uploads',
+            'disk'   => 'local',
+            'folder' => 'uploads',
+            'path'   => '/storage/app/uploads',
             'temporaryUrlTTL' => 3600,
         ],
 
@@ -353,7 +353,7 @@ return [
     |
     */
 
-    'linkPolicy' => 'detect',
+    'linkPolicy' => env('LINK_POLICY', 'secure'),
 
     /*
     |--------------------------------------------------------------------------
