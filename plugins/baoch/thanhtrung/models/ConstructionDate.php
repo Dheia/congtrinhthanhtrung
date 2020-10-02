@@ -66,4 +66,54 @@ class ConstructionDate extends Model
         return $result;
     }
 
+    /**
+     * Function handle filter
+     */
+    public function filterFields($fields, $context = null)
+    {
+      // if (!empty($fields)) {
+      //   print_r($field);
+      // }
+        // if (!empty($fields->total)) {
+        //     $fields->remaining_amount->value = $fields->total->value - $fields->total_paid->value;
+        // }
+        // if (!empty($fields->material_id)) {
+        //     $material = Material::find($fields->material_id->value);
+        //     if (!empty($material)) {
+
+        //         if (!empty($fields->material_amount)) {
+        //             $fields->material_quantity->value = $material->quantity - $fields->material_amount->value;
+        //             $fields->construction_material_paid->value = $material->price * $fields->material_amount->value;
+        //             if (!empty($fields->material_custom_price)) {
+        //               $fields->construction_material_total->value = $fields->material_amount->value * $fields->material_custom_price->value;
+        //               $fields->material_revenue->value = $fields->construction_material_total->value - $fields->construction_material_paid->value;
+        //             }
+        //         } else {
+        //             $fields->material_quantity->value = $material->quantity;
+        //             $fields->construction_material_paid->value = '0';
+        //         }
+        //         // $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+        //         // fwrite($myfile, print_r(json_decode(json_encode($material), true), true));
+        //         // fclose($myfile);
+        //         $fields->material_price->value = $material->price;
+        //     }
+        // }
+
+        if (!empty($fields->paid_or_received->value)) {
+          // print_r($fields->paid_or_received->value);
+          $totalPaid  = 0;
+          $totalIncome  = 0;
+          foreach ($fields->paid_or_received->value as $value) {
+            if (!empty($value['isPaid']) && $value['isPaid'] == 'thu') {
+              $totalIncome += $value['price'];
+            }
+            if (!empty($value['isPaid']) && $value['isPaid'] == 'chi') {
+              $totalPaid += $value['price'];
+            }
+          }
+          $fields->total_paid->value = -$totalPaid;
+          $fields->total_income->value = $totalIncome;
+        }
+      }
+
 }

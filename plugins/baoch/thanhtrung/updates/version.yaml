@@ -99,3 +99,6 @@
 1.0.34:
     - 'Updated table baoch_thanhtrung_construction_date_employee'
     - builder_table_update_baoch_thanhtrung_construction_date_employee_5.php
+1.0.35:
+    - 'Updated table baoch_thanhtrung_construction_date'
+    - builder_table_update_baoch_thanhtrung_construction_date_3.php

@@ -10,6 +10,26 @@ fields:
         span: auto
         default: now
         type: datepicker
+    total_income:
+        label: 'Tổng thu'
+        span: auto
+        default: '0'
+        readOnly: 1
+        dependsOn:
+            - isPaid
+            - price
+            # - material_amount
+        type: number
+    total_paid:
+        label: 'Tổng chi'
+        span: auto
+        default: '0'
+        readOnly: 1
+        dependsOn:
+            - isPaid
+            - price
+            # - material_amount
+        type: number
 tabs:
     fields:
         # materials:

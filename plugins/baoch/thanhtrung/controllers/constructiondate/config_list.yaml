@@ -1,6 +1,6 @@
 list: $/baoch/thanhtrung/models/constructiondate/columns.yaml
 modelClass: Baoch\Thanhtrung\Models\ConstructionDate
-title: ConstructionDate
+title: 'Báo cáo công trình'
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true
 showCheckboxes: true
