@@ -194,4 +194,8 @@
   'Baoch\\Thanhtrung\\Models\\Customer' => 'plugins/baoch/thanhtrung/models/Customer.php',
   'baoch\\thanhtrung\\models\\Customer' => 'plugins/baoch/thanhtrung/models/Customer.php',
   'baoch\\thanhtrung\\models\\MaterialType' => 'plugins/baoch/thanhtrung/models/MaterialType.php',
+  'Baoch\\Thanhtrung\\Models\\ConstructionDateMaterial' => 'plugins/baoch/thanhtrung/models/ConstructionDateMaterial.php',
+  'baoch\\thanhtrung\\models\\ConstructionDateMaterial' => 'plugins/baoch/thanhtrung/models/ConstructionDateMaterial.php',
+  'baoch\\thanhtrung\\models\\ConstructionDateMaterialPivot' => 'plugins/baoch/thanhtrung/models/ConstructionDateMaterialPivot.php',
+  'baoch\\thanhtrung\\models\\ConstructionDateEmployee' => 'plugins/baoch/thanhtrung/models/ConstructionDateEmployee.php',
 );

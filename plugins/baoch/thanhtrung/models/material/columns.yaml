@@ -36,3 +36,7 @@ columns:
         type: text
         searchable: true
         sortable: true
+    test:
+        label: Tong
+        type: number
+        default: total_weight

@@ -35,6 +35,7 @@ class ConstructionDate extends Model
             'Baoch\Thanhtrung\Models\Material',
             'table' => 'baoch_thanhtrung_construction_date_material',
             'pivot' => ['custom_price', 'custom_amount', 'description'],
+            'pivotModel' => 'baoch\thanhtrung\models\ConstructionDateMaterial',
         ],
         'employees' => [
             'Baoch\Thanhtrung\Models\Employee',
@@ -44,6 +45,7 @@ class ConstructionDate extends Model
             'Baoch\Thanhtrung\Models\Employee',
             'table' => 'baoch_thanhtrung_construction_date_employee',
             'pivot' => ['custom_salary', 'working_hour', 'description'],
+            'pivotModel' => 'baoch\thanhtrung\models\ConstructionDateEmployee',
         ],
     ];
 

@@ -1,43 +1,21 @@
 <?php namespace Baoch\Thanhtrung\Models;
 
-use Model;
+use October\Rain\Database\Pivot;
 
 /**
- * Model
+ * User-Role Pivot Model
  */
-class Construction extends Model
+class ConstructionDateMaterial extends Pivot
 {
+
     use \October\Rain\Database\Traits\Validation;
-    
-    /*
-     * Disable timestamps by default.
-     * Remove this line if timestamps are defined in the database table.
-     */
-    public $timestamps = false;
-
 
     /**
-     * @var string The database table used by the model.
-     */
-    public $table = 'baoch_thanhtrung_construction_date_material';
-
-    /**
-     * @var array Validation rules
+     * @var array Rules
      */
     public $rules = [
-      'clearance_level' => 'required|min:3',
+        'custom_amount' => 'required|min:0.0|max:10.0',
+        'custom_price' => 'required|min:0.0|max:10.0',
     ];
 
-    /**
-     * Function get list customer
-     */
-    public function getCustomerIdOptions()
-    {
-        //do whatever you want to do
-        $result = [];
-        foreach (Customer::all() as $customer) {
-            $result[$customer->id] = [$customer->name];
-        }
-        return $result;
-    }
 }
