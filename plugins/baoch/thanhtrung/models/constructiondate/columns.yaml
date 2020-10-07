@@ -6,9 +6,8 @@ columns:
         relation: construction
     customer:
         label: 'Khách hàng'
-        type: text
-        select: customer_id
-        relation: construction
+        type: partial
+        path: $/baoch/thanhtrung/models/constructiondate/_customer_name.htm
     date:
         label: date
         type: text

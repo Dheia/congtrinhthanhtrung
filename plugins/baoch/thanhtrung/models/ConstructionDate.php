@@ -8,13 +8,12 @@ use Model;
 class ConstructionDate extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    
+
     /*
      * Disable timestamps by default.
      * Remove this line if timestamps are defined in the database table.
      */
     public $timestamps = false;
-
 
     /**
      * @var string The database table used by the model.
@@ -28,29 +27,29 @@ class ConstructionDate extends Model
     public $rules = [
     ];
     public $belongsToMany = [
-      'materials' => [
-          'Baoch\Thanhtrung\Models\Material',
-          'table' => 'baoch_thanhtrung_construction_date_material',
-      ],
-      'materials_pivot' => [
-          'Baoch\Thanhtrung\Models\Material',
-          'table' => 'baoch_thanhtrung_construction_date_material',
-          'pivot' => ['custom_price', 'custom_amount', 'description'],
-      ],
-      'employees' => [
-          'Baoch\Thanhtrung\Models\Employee',
-          'table' => 'baoch_thanhtrung_construction_date_employee',
-      ],
-      'employees_pivot' => [
-          'Baoch\Thanhtrung\Models\Employee',
-          'table' => 'baoch_thanhtrung_construction_date_employee',
-          'pivot' => ['custom_salary', 'working_hour', 'description'],
-      ],
+        'materials' => [
+            'Baoch\Thanhtrung\Models\Material',
+            'table' => 'baoch_thanhtrung_construction_date_material',
+        ],
+        'materials_pivot' => [
+            'Baoch\Thanhtrung\Models\Material',
+            'table' => 'baoch_thanhtrung_construction_date_material',
+            'pivot' => ['custom_price', 'custom_amount', 'description'],
+        ],
+        'employees' => [
+            'Baoch\Thanhtrung\Models\Employee',
+            'table' => 'baoch_thanhtrung_construction_date_employee',
+        ],
+        'employees_pivot' => [
+            'Baoch\Thanhtrung\Models\Employee',
+            'table' => 'baoch_thanhtrung_construction_date_employee',
+            'pivot' => ['custom_salary', 'working_hour', 'description'],
+        ],
     ];
 
     public $belongsTo = [
-      'construction' => 'baoch\thanhtrung\models\Construction',
-      'customer' => 'baoch\thanhtrung\models\Customer',
+        'construction' => 'baoch\thanhtrung\models\Construction',
+        'customer' => 'baoch\thanhtrung\models\Customer',
     ];
 
     /**
@@ -71,9 +70,9 @@ class ConstructionDate extends Model
      */
     public function filterFields($fields, $context = null)
     {
-      // if (!empty($fields)) {
-      //   print_r($field);
-      // }
+        // if (!empty($fields)) {
+        //   print_r($field);
+        // }
         // if (!empty($fields->total)) {
         //     $fields->remaining_amount->value = $fields->total->value - $fields->total_paid->value;
         // }
@@ -100,20 +99,56 @@ class ConstructionDate extends Model
         // }
 
         if (!empty($fields->paid_or_received->value)) {
-          // print_r($fields->paid_or_received->value);
-          $totalPaid  = 0;
-          $totalIncome  = 0;
-          foreach ($fields->paid_or_received->value as $value) {
-            if (!empty($value['isPaid']) && $value['isPaid'] == 'thu') {
-              $totalIncome += $value['price'];
+            // print_r($fields->paid_or_received->value);
+            $totalPaid = 0;
+            $totalIncome = 0;
+            foreach ($fields->paid_or_received->value as $value) {
+                if (!empty($value['isPaid']) && $value['isPaid'] == 'thu') {
+                    $totalIncome += $value['price'];
+                }
+                if (!empty($value['isPaid']) && $value['isPaid'] == 'chi') {
+                    $totalPaid += $value['price'];
+                }
             }
-            if (!empty($value['isPaid']) && $value['isPaid'] == 'chi') {
-              $totalPaid += $value['price'];
+            // echo "<pre>";
+            // if (!empty($fields->id)) {
+            //   print_r($fields->id);
+            //   // $construction = Construction::find($fields->construction_id->value);
+            //   // print_r($construction->ma);
+            // }
+            // print_r(json_decode(json_encode($this->id)));
+            $constructionDate = ConstructionDate::find($this->id);
+            if (!empty($constructionDate->materials_pivot)) {
+                foreach ($constructionDate->materials_pivot as $value) {
+                    if (!empty($value->pivot->custom_price)) {
+                      $totalPaid += $value->pivot->custom_price;
+                    }
+                }
             }
+            if (!empty($constructionDate->employees_pivot)) {
+              foreach ($constructionDate->employees_pivot as $value) {
+                  if (!empty($value->pivot->custom_salary) && !empty($value->pivot->working_hour)) {
+                    // print_r($value->pivot);
+                    $totalPaid += $value->pivot->custom_salary * $value->pivot->working_hour;
+                  }
+              }
           }
-          $fields->total_paid->value = -$totalPaid;
-          $fields->total_income->value = $totalIncome;
+            // foreach ($constructionDate->materials_pivot)
+            // foreach ($fields->materials_pivot->value as $v) {
+            //   if (!empty($v)) {
+            //     echo "<pre>";
+            //     print_r(Material::find($v));
+            //     // die;
+            //   }
+            // }
+            // foreach($fields->materials_pivot->value as $value) {
+            //   if (!empty($value)) {
+            //     print_r(json_decode(json_encode($value)));
+            //   }
+            // }
+            $fields->total_paid->value = -$totalPaid;
+            $fields->total_income->value = $totalIncome;
         }
-      }
+    }
 
 }

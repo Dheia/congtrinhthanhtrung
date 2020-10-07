@@ -18,7 +18,8 @@ fields:
         dependsOn:
             - isPaid
             - price
-            # - material_amount
+            - materials_pivot
+            - employees_pivot
         type: number
     total_paid:
         label: 'Tổng chi'
@@ -28,7 +29,8 @@ fields:
         dependsOn:
             - isPaid
             - price
-            # - material_amount
+            - materials_pivot
+            - employees_pivot
         type: number
 tabs:
     fields:
