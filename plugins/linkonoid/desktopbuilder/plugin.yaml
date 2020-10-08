@@ -8,9 +8,3 @@ permissions:
     linkonoid.backtofront.access_settings:
         tab: 'linkonoid.desktopbuilder::lang.permissions.tab'
         label: 'linkonoid.desktopbuilder::lang.permissions.settings'
-navigation:
-    Constructions:
-        label: 'Báo cáo công trình'
-        url: linkonoid/desktopbuilder/constructiondate
-        icon: icon-anchor
-        permissions: {  }

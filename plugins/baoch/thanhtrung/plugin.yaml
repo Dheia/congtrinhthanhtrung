@@ -10,10 +10,6 @@ navigation:
         url: baoch/thanhtrung/constructiondate
         icon: icon-area-chart
         sideMenu:
-            construction:
-                label: 'Công trình'
-                url: baoch/thanhtrung/construction
-                icon: icon-hospital-o
             material-type:
                 label: 'Loại vật liệu'
                 url: baoch/thanhtrung/materialtype
@@ -30,3 +26,7 @@ navigation:
         label: 'Khách hàng'
         url: baoch/thanhtrung/customer
         icon: icon-users
+    construction:
+        label: 'Công trình'
+        url: baoch/thanhtrung/construction
+        icon: icon-hospital-o
