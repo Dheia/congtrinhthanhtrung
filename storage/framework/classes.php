@@ -198,4 +198,6 @@
   'baoch\\thanhtrung\\models\\ConstructionDateMaterial' => 'plugins/baoch/thanhtrung/models/ConstructionDateMaterial.php',
   'baoch\\thanhtrung\\models\\ConstructionDateMaterialPivot' => 'plugins/baoch/thanhtrung/models/ConstructionDateMaterialPivot.php',
   'baoch\\thanhtrung\\models\\ConstructionDateEmployee' => 'plugins/baoch/thanhtrung/models/ConstructionDateEmployee.php',
+  'romanov\\clearcachewidget\\Plugin' => 'plugins/romanov/clearcachewidget/Plugin.php',
+  'Romanov\\ClearCacheWidget\\ReportWidgets\\ClearCache' => 'plugins/romanov/clearcachewidget/reportwidgets/ClearCache.php',
 );
