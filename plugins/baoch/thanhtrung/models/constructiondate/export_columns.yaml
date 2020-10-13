@@ -1,0 +1,7 @@
+columns:
+    construction_id:
+        label: Công trình
+        type: text
+    date:
+        label: Ngày
+        type: text

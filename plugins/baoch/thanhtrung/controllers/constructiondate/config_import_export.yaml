@@ -1,0 +1,11 @@
+export:
+    title: Export Contruction
+    modelClass: Baoch\Thanhtrung\Models\ConstructionDateExport
+    list: $/baoch/thanhtrung/models/constructiondate/export_columns.yaml
+    redirect: baoch/thanhtrung/constructiondate
+    form: $/baoch/thanhtrung/models/constructiondate/export_fields.yaml
+defaultFormatOptions:
+    delimiter: ';'
+    enclosure: '"'
+    escape: '\'
+    encoding: 'utf-8'

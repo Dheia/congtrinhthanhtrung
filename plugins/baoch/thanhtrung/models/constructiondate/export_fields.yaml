@@ -1,0 +1,18 @@
+fields:
+    construction_id:
+        label: 'Công trình'
+        showSearch: true
+        span: auto
+        type: dropdown
+    date_from:
+        label: Từ ngày
+        mode: date
+        span: left
+        default: now
+        type: datepicker
+    date_to:
+        label: Đến ngày
+        mode: date
+        span: right
+        default: now
+        type: datepicker
