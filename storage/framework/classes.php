@@ -201,4 +201,7 @@
   'romanov\\clearcachewidget\\Plugin' => 'plugins/romanov/clearcachewidget/Plugin.php',
   'Romanov\\ClearCacheWidget\\ReportWidgets\\ClearCache' => 'plugins/romanov/clearcachewidget/reportwidgets/ClearCache.php',
   'Baoch\\Thanhtrung\\Models\\ConstructionDateExport' => 'plugins/baoch/thanhtrung/models/ConstructionDateExport.php',
+  'Vdomah\\Excel\\Classes\\Excel' => 'plugins/vdomah/excel/classes/Excel.php',
+  'Baoch\\Thanhtrung\\Models\\ConstructionDateExportExcel' => 'plugins/baoch/thanhtrung/models/ConstructionDateExportExcel.php',
+  'Vdomah\\Excel\\Classes\\XlsxStyled' => 'plugins/vdomah/excel/classes/XlsxStyled.php',
 );

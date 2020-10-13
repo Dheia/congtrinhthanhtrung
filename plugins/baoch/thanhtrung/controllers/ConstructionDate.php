@@ -1,7 +1,11 @@
 <?php namespace Baoch\Thanhtrung\Controllers;
 
 use Backend\Classes\Controller;
+use Backend\Facades\Backend;
 use BackendMenu;
+use Illuminate\Support\Facades\Session;
+use Vdomah\Excel\Classes\Excel;
+use Baoch\Thanhtrung\Models\ConstructionDateExportExcel;
 
 class ConstructionDate extends Controller
 {
@@ -23,5 +27,21 @@ class ConstructionDate extends Controller
     {
         parent::__construct();
         BackendMenu::setContext('Baoch.Thanhtrung', 'cong-trinh');
+    }
+
+
+    public function onExportExcel()
+    {
+        $optionData = post('ExportOptions');
+
+        return Backend::redirect('baoch/thanhtrung/constructiondate/download-excel')
+            ->with('export_data', $optionData);
+    }
+
+    public function downloadExcel()
+    {
+        $filterData = Session::get('export_data') ?? [];
+
+        return Excel::export(new ConstructionDateExportExcel($filterData), 'excel', 'xlsx');
     }
 }

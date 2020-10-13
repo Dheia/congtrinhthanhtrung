@@ -63,7 +63,7 @@ class ConstructionDateExport extends ExportModel
                 ->get();
             if (!empty($constructionDates)) {
                 foreach ($constructionDates as $constructionDate){
-                    $cDate = (new \DateTime($constructionDate->created_at))
+                    $cDate = (new \DateTime($constructionDate->date))
                         ->setTimezone(new \DateTimeZone('Asia/Ho_Chi_Minh'));
                     $cDate = $cDate->format('d/m/Y');
                     //
