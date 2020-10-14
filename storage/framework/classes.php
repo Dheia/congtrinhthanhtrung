@@ -157,4 +157,5 @@
   'Vdomah\\Excel\\Classes\\Excel' => 'plugins/vdomah/excel/classes/Excel.php',
   'Baoch\\Thanhtrung\\Models\\ConstructionDateExportExcel' => 'plugins/baoch/thanhtrung/models/ConstructionDateExportExcel.php',
   'Vdomah\\Excel\\Classes\\XlsxStyled' => 'plugins/vdomah/excel/classes/XlsxStyled.php',
+  'vdomah\\excel\\Plugin' => 'plugins/vdomah/excel/Plugin.php',
 );
