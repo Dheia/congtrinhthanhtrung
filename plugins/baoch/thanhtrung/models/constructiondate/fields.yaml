@@ -16,6 +16,7 @@ fields:
         default: '0'
         readOnly: 1
         dependsOn:
+            - paid_or_received
             - isPaid
             - price
             - materials_pivot
@@ -27,6 +28,7 @@ fields:
         default: '0'
         readOnly: 1
         dependsOn:
+            - paid_or_received
             - isPaid
             - price
             - materials_pivot

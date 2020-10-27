@@ -72,38 +72,9 @@ class ConstructionDate extends Model
      */
     public function filterFields($fields, $context = null)
     {
-        // if (!empty($fields)) {
-        //   print_r($field);
-        // }
-        // if (!empty($fields->total)) {
-        //     $fields->remaining_amount->value = $fields->total->value - $fields->total_paid->value;
-        // }
-        // if (!empty($fields->material_id)) {
-        //     $material = Material::find($fields->material_id->value);
-        //     if (!empty($material)) {
-
-        //         if (!empty($fields->material_amount)) {
-        //             $fields->material_quantity->value = $material->quantity - $fields->material_amount->value;
-        //             $fields->construction_material_paid->value = $material->price * $fields->material_amount->value;
-        //             if (!empty($fields->material_custom_price)) {
-        //               $fields->construction_material_total->value = $fields->material_amount->value * $fields->material_custom_price->value;
-        //               $fields->material_revenue->value = $fields->construction_material_total->value - $fields->construction_material_paid->value;
-        //             }
-        //         } else {
-        //             $fields->material_quantity->value = $material->quantity;
-        //             $fields->construction_material_paid->value = '0';
-        //         }
-        //         // $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
-        //         // fwrite($myfile, print_r(json_decode(json_encode($material), true), true));
-        //         // fclose($myfile);
-        //         $fields->material_price->value = $material->price;
-        //     }
-        // }
-
-        if (!empty($fields->paid_or_received->value)) {
-            // print_r($fields->paid_or_received->value);
-            $totalPaid = 0;
-            $totalIncome = 0;
+        $totalPaid = 0;
+        $totalIncome = 0;
+        if (!empty($fields->paid_or_received)) {
             foreach ($fields->paid_or_received->value as $value) {
                 if (!empty($value['isPaid']) && $value['isPaid'] == 'thu') {
                     $totalIncome += $value['price'];
@@ -112,43 +83,26 @@ class ConstructionDate extends Model
                     $totalPaid += $value['price'];
                 }
             }
-            // echo "<pre>";
-            // if (!empty($fields->id)) {
-            //   print_r($fields->id);
-            //   // $construction = Construction::find($fields->construction_id->value);
-            //   // print_r($construction->ma);
-            // }
-            // print_r(json_decode(json_encode($this->id)));
-            $constructionDate = ConstructionDate::find($this->id);
-            if (!empty($constructionDate->materials_pivot)) {
-                foreach ($constructionDate->materials_pivot as $value) {
-                    if (!empty($value->pivot->custom_price)) {
-                      $totalPaid += $value->pivot->custom_price;
-                    }
+        }
+        $constructionDate = ConstructionDate::find($this->id);
+        if (!empty($constructionDate->materials_pivot)) {
+            foreach ($constructionDate->materials_pivot as $value) {
+                if (!empty($value->pivot->custom_price)) {
+                    $totalPaid += $value->pivot->custom_price;
                 }
             }
-            if (!empty($constructionDate->employees_pivot)) {
-              foreach ($constructionDate->employees_pivot as $value) {
-                  if (!empty($value->pivot->custom_salary) && !empty($value->pivot->working_hour)) {
-                    // print_r($value->pivot);
+        }
+        if (!empty($constructionDate->employees_pivot)) {
+            foreach ($constructionDate->employees_pivot as $value) {
+                if (!empty($value->pivot->custom_salary) && !empty($value->pivot->working_hour)) {
                     $totalPaid += $value->pivot->custom_salary * $value->pivot->working_hour;
-                  }
-              }
-          }
-            // foreach ($constructionDate->materials_pivot)
-            // foreach ($fields->materials_pivot->value as $v) {
-            //   if (!empty($v)) {
-            //     echo "<pre>";
-            //     print_r(Material::find($v));
-            //     // die;
-            //   }
-            // }
-            // foreach($fields->materials_pivot->value as $value) {
-            //   if (!empty($value)) {
-            //     print_r(json_decode(json_encode($value)));
-            //   }
-            // }
+                }
+            }
+        }
+        if (!empty($fields->total_paid)) {
             $fields->total_paid->value = -$totalPaid;
+        }
+        if (!empty($fields->total_income)) {
             $fields->total_income->value = $totalIncome;
         }
     }
