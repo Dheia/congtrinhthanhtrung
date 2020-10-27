@@ -30,3 +30,7 @@ navigation:
         label: 'Công trình'
         url: baoch/thanhtrung/construction
         icon: icon-hospital-o
+permissions:
+    baoch_thanhtrung_export:
+        tab: Export
+        label: Export

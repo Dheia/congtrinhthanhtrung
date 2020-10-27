@@ -17,9 +17,11 @@
         <?= e(trans('backend::lang.list.delete_selected')) ?>
     </button>
     <!-- our export button -->
+    <?php if ($this->user->hasAccess('baoch_thanhtrung_export')): ?>
     <a
             href="<?= Backend::url('baoch/thanhtrung/constructiondate/export') ?>"
             class="btn btn-primary oc-icon-sign-out">
-        Export
+        Xuất
     </a>
+    <?php endif ?>
 </div>
