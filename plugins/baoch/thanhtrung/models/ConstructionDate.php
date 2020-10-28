@@ -72,11 +72,9 @@ class ConstructionDate extends Model
      */
     public function filterFields($fields, $context = null)
     {
-        if (!empty($fields->paid_or_received)
-            || !empty($fields->materials_pivot)
-            || !empty($fields->employees_pivot)) {
-            $totalPaid = 0;
-            $totalIncome = 0;
+        $totalPaid = 0;
+        $totalIncome = 0;
+        if (!empty($fields->paid_or_received->value)) {
             foreach ($fields->paid_or_received->value as $value) {
                 if (!empty($value['isPaid']) && $value['isPaid'] == 'thu') {
                     $totalIncome += $value['price'];
@@ -85,28 +83,29 @@ class ConstructionDate extends Model
                     $totalPaid += $value['price'];
                 }
             }
-            $constructionDate = ConstructionDate::find($this->id);
-            if (!empty($constructionDate->materials_pivot)) {
-                foreach ($constructionDate->materials_pivot as $value) {
-                    if (!empty($value->pivot->custom_price)) {
-                        $totalPaid += $value->pivot->custom_price;
-                    }
+        }
+        $constructionDate = ConstructionDate::find($this->id);
+        if (!empty($constructionDate->materials_pivot)) {
+            foreach ($constructionDate->materials_pivot as $value) {
+                if (!empty($value->pivot->custom_price)) {
+                    $totalPaid += $value->pivot->custom_price;
                 }
-            }
-            if (!empty($constructionDate->employees_pivot)) {
-                foreach ($constructionDate->employees_pivot as $value) {
-                    if (!empty($value->pivot->custom_salary) && !empty($value->pivot->working_hour)) {
-                        $totalPaid += $value->pivot->custom_salary * $value->pivot->working_hour;
-                    }
-                }
-            }
-            if (!empty($fields->total_paid)) {
-                $fields->total_paid->value = -$totalPaid;
-            }
-            if (!empty($fields->total_income)) {
-                $fields->total_income->value = $totalIncome;
             }
         }
+        if (!empty($constructionDate->employees_pivot)) {
+            foreach ($constructionDate->employees_pivot as $value) {
+                if (!empty($value->pivot->custom_salary) && !empty($value->pivot->working_hour)) {
+                    $totalPaid += $value->pivot->custom_salary * $value->pivot->working_hour;
+                }
+            }
+        }
+        if (!empty($fields->total_paid)) {
+            $fields->total_paid->value = -$totalPaid;
+        }
+        if (!empty($fields->total_income)) {
+            $fields->total_income->value = $totalIncome;
+        }
+
     }
 
 }
