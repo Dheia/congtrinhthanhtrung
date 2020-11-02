@@ -158,4 +158,6 @@
   'Baoch\\Thanhtrung\\Models\\ConstructionDateExportExcel' => 'plugins/baoch/thanhtrung/models/ConstructionDateExportExcel.php',
   'Vdomah\\Excel\\Classes\\XlsxStyled' => 'plugins/vdomah/excel/classes/XlsxStyled.php',
   'vdomah\\excel\\Plugin' => 'plugins/vdomah/excel/Plugin.php',
+  'Baoch\\Thanhtrung\\Models\\MaterialImport' => 'plugins/baoch/thanhtrung/models/MaterialImport.php',
+  'Baoch\\Thanhtrung\\Models\\MaterialImportSheet1' => 'plugins/baoch/thanhtrung/models/MaterialImportSheet1.php',
 );

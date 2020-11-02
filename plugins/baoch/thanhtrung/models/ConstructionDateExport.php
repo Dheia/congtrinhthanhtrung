@@ -32,26 +32,6 @@ class ConstructionDateExport extends ExportModel
 
     public function exportData($columns, $sessionKey = null)
     {
-//        $books = Book::with([
-//            'author.contacts'  => function($query){ $query->addSelect(['name', 'author_id']); },
-//            'author' => function($query){ $query->addSelect(['id', 'name', 'email']); },
-//            'categories' => function($query){ $query->addSelect(['name']); }
-//        ])->get();
-//        $books->each(function($book) use ($columns) {
-//            /** @var Book $book */
-//            $book->addVisible($columns);
-//        });
-//        $collection = collect($books->toArray());
-//        $data = $collection->map(function ($item) {
-//            if(is_array($item)){
-//                foreach($item as $key => $value) {
-//                    if(is_array($value)) {
-//                        $item[$key] = json_encode($value);
-//                    }
-//                }
-//            }
-//            return $item;
-//        });
         $data = [];
         if ($this->construction_id && $this->date_from && $this->date_to) {
             // Do something

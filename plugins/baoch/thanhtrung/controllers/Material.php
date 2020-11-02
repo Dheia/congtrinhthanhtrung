@@ -1,6 +1,9 @@
 <?php namespace Baoch\Thanhtrung\Controllers;
 
 use Backend\Classes\Controller;
+use Backend\Facades\Backend;
+use Baoch\Thanhtrung\Models\MaterialImport;
+use Vdomah\Excel\Classes\Excel;
 use BackendMenu;
 
 class Material extends Controller
@@ -16,4 +19,11 @@ class Material extends Controller
         parent::__construct();
         BackendMenu::setContext('Baoch.Thanhtrung', 'cong-trinh', 'material');
     }
+
+    public function onImportMaterialExcel()
+    {
+         Excel::import(new MaterialImport, request()->file('file-upload'));
+         return Backend::redirect('baoch/thanhtrung/material');
+    }
+
 }
