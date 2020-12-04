@@ -62,12 +62,13 @@ class Material extends Model
             // Calculate using excel format
             $spreadsheet = new Spreadsheet();
             $sheet = $spreadsheet->getActiveSheet();
-            $sheet->setCellValue('A1', $fields->amount->value);
-            $sheet->setCellValue('B1', $fields->purchase_price->value);
-            $sheet->setCellValue('C1', $fields->amount->value);
-            $sheet->setCellValue('D1', $fields->purchase_price->value);
-            $sheet->setCellValue('A2', '=' . $fields->formula->value);
-            $fields->sale_price->value = $sheet->getCell('A2')->getCalculatedValue();
+            $sheet->setCellValue('A1', $fields->length->value);
+            $sheet->setCellValue('A2', $fields->amount->value);
+            $sheet->setCellValue('A3', $fields->total_weight->value);
+            $sheet->setCellValue('A4', $fields->purchase_price->value);
+            $sheet->setCellValue('C1', '=' . $fields->formula->value);
+            $fields->sale_price->value = $sheet->getCell('C1')->getCalculatedValue();
+            unset($sheet);
         }
     }
 

@@ -21,15 +21,15 @@ fields:
         span: auto
         type: number
     amount:
-        label: 'Số lượng (B1)'
+        label: 'Số lượng (A2)'
         span: auto
         type: number
     total_weight:
-        label: 'Trọng lượng (C1)'
+        label: 'Trọng lượng (A3)'
         span: auto
         type: number
     purchase_price:
-        label: 'Đơn giá (D1)'
+        label: 'Đơn giá (A4)'
         span: auto
         type: number
     formula:
