@@ -1,6 +1,7 @@
 <?php namespace Baoch\Thanhtrung\Models;
 
 use Model;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
 
 /**
  * Model
@@ -46,4 +47,28 @@ class Material extends Model
         }
         return $result;
     }
+
+
+    /**
+     * Function handle filter
+     */
+    public function filterFields($fields, $context = null)
+    {
+        if (!empty($fields->length->value) &&
+            !empty($fields->amount->value) &&
+            !empty($fields->total_weight->value) &&
+            !empty($fields->purchase_price->value) &&
+            !empty($fields->formula->value)) {
+            // Calculate using excel format
+            $spreadsheet = new Spreadsheet();
+            $sheet = $spreadsheet->getActiveSheet();
+            $sheet->setCellValue('A1', $fields->amount->value);
+            $sheet->setCellValue('B1', $fields->purchase_price->value);
+            $sheet->setCellValue('C1', $fields->amount->value);
+            $sheet->setCellValue('D1', $fields->purchase_price->value);
+            $sheet->setCellValue('A2', '=' . $fields->formula->value);
+            $fields->sale_price->value = $sheet->getCell('A2')->getCalculatedValue();
+        }
+    }
+
 }

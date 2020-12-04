@@ -21,8 +21,13 @@ columns:
         type: text
         searchable: true
         sortable: true
+    length:
+        label: 'Chiều dài'
+        type: text
+        searchable: true
+        sortable: true
     amount:
-        label: 'Số lượng còn lại'
+        label: 'Số lượng'
         type: text
         searchable: true
         sortable: true
@@ -36,7 +41,8 @@ columns:
         type: text
         searchable: true
         sortable: true
-    test:
-        label: Tong
-        type: number
-        default: total_weight
+    sale_price:
+        label: Tổng
+        type: text
+        searchable: true
+        sortable: true

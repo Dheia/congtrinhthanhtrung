@@ -16,22 +16,38 @@ fields:
         label: 'Màu sắc'
         span: auto
         type: text
+    length:
+        label: 'Độ dài (A1)'
+        span: auto
+        type: number
     amount:
-        label: 'Số lượng'
+        label: 'Số lượng (B1)'
         span: auto
         type: number
     total_weight:
-        label: 'Trọng lượng'
+        label: 'Trọng lượng (C1)'
         span: auto
         type: number
     purchase_price:
-        label: 'Đơn giá'
+        label: 'Đơn giá (D1)'
         span: auto
         type: number
+    formula:
+        label: 'Công thức'
+        span: auto
+        type: text
     sale_price:
-        label: 'Giá xuất căn bản'
+        label: 'Tổng tiền'
         span: auto
         type: number
+        default: '0'
+        readOnly: 1
+        dependsOn:
+            - length
+            - amount
+            - total_weight
+            - purchase_price
+            - formula
     description:
         label: 'Mô tả'
         size: small
