@@ -30,26 +30,11 @@ class File extends Model
     public $morphTo = [
         'attachment' => []
     ];
-    
-    /**
-     * @var array The attributes that are mass assignable.
-     */
-    protected $fillable = [
-        'file_name',
-        'title',
-        'description',
-        'field',
-        'attachment_id',
-        'attachment_type',
-        'is_public',
-        'sort_order',
-        'data',
-    ];
 
     /**
      * @var array The attributes that aren't mass assignable.
      */
-    protected $guarded = [];
+    protected $guarded = ['disk_name'];
 
     /**
      * @var array Known image extensions.

@@ -20,8 +20,6 @@ final class SecurityPolicy implements SecurityPolicyInterface
     protected $blockedMethods = [
         'addDynamicMethod',
         'addDynamicProperty',
-        'bindEvent',
-        'bindEventOnce',
     ];
 
     /**
