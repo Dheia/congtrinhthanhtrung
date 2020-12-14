@@ -1,0 +1,55 @@
+fields:
+    code:
+        label: 'Mã vật liệu'
+        span: auto
+        readOnly: 1
+        type: text
+    name:
+        label: Tên
+        span: auto
+        readOnly: 1
+        type: text
+    material_type_id:
+        label: 'Loại vật liệu'
+        showSearch: true
+        span: auto
+        disabled: 1
+        type: dropdown
+    color:
+        label: 'Màu sắc'
+        span: auto
+        readOnly: 1
+        type: text
+    length:
+        label: 'Độ dài (A1)'
+        span: auto
+        readOnly: 1
+        type: number
+    total_weight:
+        label: 'Trọng lượng (A2)'
+        span: auto
+        readOnly: 1
+        type: number
+    'pivot[amount]':
+        label: 'Số lượng (A3)'
+        span: auto
+        type: number
+    'pivot[price]':
+        label: 'Giá (A4)'
+        span: auto
+        type: number
+    'pivot[formula]':
+        label: 'Công thức'
+        span: auto
+        default: 'A1*A2*A3*A4'
+        type: text
+    'pivot[total]':
+        label: 'Tổng tiền'
+        span: auto
+        type: number
+        default: '0'
+        readOnly: 1
+        dependsOn:
+            - pivot[amount]
+            - pivot[price]
+            - pivot[formula]

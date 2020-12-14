@@ -105,3 +105,12 @@
 1.0.36:
     - 'Updated table baoch_thanhtrung_material'
     - builder_table_update_baoch_thanhtrung_material_5.php
+1.0.37:
+    - 'Created table baoch_thanhtrung_storage'
+    - builder_table_create_baoch_thanhtrung_storage.php
+1.0.38:
+    - 'Updated table baoch_thanhtrung_material'
+    - builder_table_update_baoch_thanhtrung_material_6.php
+1.0.39:
+    - 'Created table baoch_thanhtrung_material_storage'
+    - builder_table_create_baoch_thanhtrung_material_storage.php

@@ -160,4 +160,7 @@
   'vdomah\\excel\\Plugin' => 'plugins/vdomah/excel/Plugin.php',
   'Baoch\\Thanhtrung\\Models\\MaterialImport' => 'plugins/baoch/thanhtrung/models/MaterialImport.php',
   'Baoch\\Thanhtrung\\Models\\MaterialImportSheet1' => 'plugins/baoch/thanhtrung/models/MaterialImportSheet1.php',
+  'baoch\\thanhtrung\\Controllers\\storage' => 'plugins/baoch/thanhtrung/controllers/storage.php',
+  'Baoch\\Thanhtrung\\Models\\Storage' => 'plugins/baoch/thanhtrung/models/Storage.php',
+  'Baoch\\Thanhtrung\\Models\\MaterialStorage' => 'plugins/baoch/thanhtrung/models/MaterialStorage.php',
 );

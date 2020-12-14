@@ -33,8 +33,6 @@ class MaterialImportSheet1 implements ToModel, WithStartRow
             $material->name = $row[2];
             $material->length = $row[3];
             $material->total_weight = $row[4];
-            $material->amount = $row[5];
-            $material->purchase_price = str_replace(',', '', $row[7]);
             $material->material_type_id = 3;
 
             return $material;

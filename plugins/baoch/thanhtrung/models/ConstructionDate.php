@@ -26,6 +26,7 @@ class ConstructionDate extends Model
      */
     public $rules = [
     ];
+
     public $belongsToMany = [
         'materials' => [
             'Baoch\Thanhtrung\Models\Material',
@@ -35,7 +36,7 @@ class ConstructionDate extends Model
             'Baoch\Thanhtrung\Models\Material',
             'table' => 'baoch_thanhtrung_construction_date_material',
             'pivot' => ['custom_price', 'custom_amount', 'description'],
-            'pivotModel' => 'baoch\thanhtrung\models\ConstructionDateMaterial',
+            'pivotModel' => 'Baoch\Thanhtrung\Models\ConstructionDateMaterial',
         ],
         'employees' => [
             'Baoch\Thanhtrung\Models\Employee',
@@ -45,13 +46,13 @@ class ConstructionDate extends Model
             'Baoch\Thanhtrung\Models\Employee',
             'table' => 'baoch_thanhtrung_construction_date_employee',
             'pivot' => ['custom_salary', 'working_hour', 'description'],
-            'pivotModel' => 'baoch\thanhtrung\models\ConstructionDateEmployee',
+            'pivotModel' => 'Baoch\Thanhtrung\Models\ConstructionDateEmployee',
         ],
     ];
 
     public $belongsTo = [
-        'construction' => 'baoch\thanhtrung\models\Construction',
-        'customer' => 'baoch\thanhtrung\models\Customer',
+        'construction' => 'Baoch\Thanhtrung\Models\Construction',
+        'customer' => 'Baoch\Thanhtrung\Models\Customer',
     ];
 
     /**

@@ -22,6 +22,10 @@ navigation:
                 label: 'Nhân công'
                 url: baoch/thanhtrung/employee
                 icon: icon-user-md
+            storage:
+                label: Kho
+                url: baoch/thanhtrung/storage
+                icon: icon-suitcase
     customer:
         label: 'Khách hàng'
         url: baoch/thanhtrung/customer

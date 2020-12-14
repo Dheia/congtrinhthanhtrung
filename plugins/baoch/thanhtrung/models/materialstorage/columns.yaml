@@ -31,3 +31,23 @@ columns:
         type: text
         searchable: true
         sortable: true
+    pivot[amount]:
+        label: 'Số lượng'
+        type: number
+        searchable: true
+        sortable: true
+    pivot[price]:
+        label: Giá
+        type: number
+        searchable: true
+        sortable: true
+    pivot[formula]:
+        label: 'Công thức'
+        type: text
+        searchable: true
+        sortable: true
+    pivot[total]:
+        label: 'Tổng tiền'
+        type: number
+        searchable: true
+        sortable: true

@@ -32,7 +32,7 @@ class Material extends Model
      * Defined realation ship with material type
      */
     public $belongsTo = [
-      'material_type' => 'baoch\thanhtrung\models\MaterialType',
+      'material_type' => 'Baoch\Thanhtrung\Models\MaterialType',
     ];
 
     /**
@@ -49,27 +49,31 @@ class Material extends Model
     }
 
 
+
     /**
      * Function handle filter
      */
     public function filterFields($fields, $context = null)
     {
+        $amount = 'pivot[amount]';
+        $price = 'pivot[price]';
+        $formula = 'pivot[formula]';
+        $total = 'pivot[total]';
         if (!empty($fields->length->value) &&
-            !empty($fields->amount->value) &&
             !empty($fields->total_weight->value) &&
-            !empty($fields->purchase_price->value) &&
-            !empty($fields->formula->value)) {
+            !empty($fields->$amount->value) &&
+            !empty($fields->$price->value) &&
+            !empty($fields->$formula->value)) {
             // Calculate using excel format
             $spreadsheet = new Spreadsheet();
             $sheet = $spreadsheet->getActiveSheet();
             $sheet->setCellValue('A1', $fields->length->value);
-            $sheet->setCellValue('A2', $fields->amount->value);
-            $sheet->setCellValue('A3', $fields->total_weight->value);
-            $sheet->setCellValue('A4', $fields->purchase_price->value);
-            $sheet->setCellValue('C1', '=' . $fields->formula->value);
-            $fields->sale_price->value = $sheet->getCell('C1')->getCalculatedValue();
+            $sheet->setCellValue('A2', $fields->total_weight->value);
+            $sheet->setCellValue('A3', $fields->$amount->value);
+            $sheet->setCellValue('A4', $fields->$price->value);
+            $sheet->setCellValue('C1', '=' . $fields->$formula->value);
+            $fields->$total->value = $sheet->getCell('C1')->getCalculatedValue();
             unset($sheet);
         }
     }
-
 }

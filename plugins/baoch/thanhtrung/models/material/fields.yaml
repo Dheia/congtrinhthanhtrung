@@ -20,34 +20,10 @@ fields:
         label: 'Độ dài (A1)'
         span: auto
         type: number
-    amount:
-        label: 'Số lượng (A2)'
-        span: auto
-        type: number
     total_weight:
-        label: 'Trọng lượng (A3)'
+        label: 'Trọng lượng (A2)'
         span: auto
         type: number
-    purchase_price:
-        label: 'Đơn giá (A4)'
-        span: auto
-        type: number
-    formula:
-        label: 'Công thức'
-        span: auto
-        type: text
-    sale_price:
-        label: 'Tổng tiền'
-        span: auto
-        type: number
-        default: '0'
-        readOnly: 1
-        dependsOn:
-            - length
-            - amount
-            - total_weight
-            - purchase_price
-            - formula
     description:
         label: 'Mô tả'
         size: small
