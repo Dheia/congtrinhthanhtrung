@@ -163,4 +163,5 @@
   'baoch\\thanhtrung\\Controllers\\storage' => 'plugins/baoch/thanhtrung/controllers/storage.php',
   'Baoch\\Thanhtrung\\Models\\Storage' => 'plugins/baoch/thanhtrung/models/Storage.php',
   'Baoch\\Thanhtrung\\Models\\MaterialStorage' => 'plugins/baoch/thanhtrung/models/MaterialStorage.php',
+  'Baoch\\Thanhtrung\\Models\\ConstructionDateEmployee' => 'plugins/baoch/thanhtrung/models/ConstructionDateEmployee.php',
 );

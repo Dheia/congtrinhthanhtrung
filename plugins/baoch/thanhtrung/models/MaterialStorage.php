@@ -8,7 +8,6 @@ use October\Rain\Database\Pivot;
 class MaterialStorage extends Pivot
 {
     use \October\Rain\Database\Traits\Validation;
-
     /**
      * @var array Rules
      */

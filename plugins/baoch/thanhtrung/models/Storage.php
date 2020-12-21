@@ -11,8 +11,8 @@ class Storage extends Model
     
     use \October\Rain\Database\Traits\SoftDelete;
 
-    protected $dates = ['deleted_at'];
 
+    protected $dates = ['deleted_at'];
 
     /**
      * @var string The database table used by the model.
@@ -23,12 +23,14 @@ class Storage extends Model
      * @var array Validation rules
      */
     public $rules = [
+        'date' => 'unique:baoch_thanhtrung_storage,date'
     ];
 
     public $belongsToMany = [
         'materials' => [
             'Baoch\Thanhtrung\Models\Material',
             'table' => 'baoch_thanhtrung_material_storage',
+            'pivot' => ['amount', 'price', 'formula', 'total'],
         ],
         'materials_pivot' => [
             'Baoch\Thanhtrung\Models\Material',

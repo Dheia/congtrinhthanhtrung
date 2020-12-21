@@ -9,7 +9,11 @@ use PhpOffice\PhpSpreadsheet\Spreadsheet;
 class Material extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    
+
+    use \October\Rain\Database\Traits\Purgeable;
+
+    protected $purgeable = ['old_total'];
+
     /*
      * Disable timestamps by default.
      * Remove this line if timestamps are defined in the database table.
@@ -35,6 +39,30 @@ class Material extends Model
       'material_type' => 'Baoch\Thanhtrung\Models\MaterialType',
     ];
 
+    public $belongsToMany = [
+        'storages' => [
+            'Baoch\Thanhtrung\Models\Storage',
+            'table' => 'baoch_thanhtrung_material_storage',
+            'pivot' => ['amount', 'price', 'formula', 'total'],
+        ],
+        'storages_pivot' => [
+            'Baoch\Thanhtrung\Models\Storage',
+            'table' => 'baoch_thanhtrung_material_storage',
+            'pivot' => ['amount', 'price', 'formula', 'total'],
+            'pivotModel' => 'Baoch\Thanhtrung\Models\MaterialStorage',
+        ],
+    ];
+
+    protected static function boot ()
+    {
+        parent::boot();
+
+        static::deleting (function ($user) {
+            $user->storages()->detach();
+        });
+    }
+
+
     /**
      * Function get list material type
      */
@@ -48,8 +76,6 @@ class Material extends Model
         return $result;
     }
 
-
-
     /**
      * Function handle filter
      */
@@ -59,6 +85,21 @@ class Material extends Model
         $price = 'pivot[price]';
         $formula = 'pivot[formula]';
         $total = 'pivot[total]';
+        $custom_amount = 'pivot[custom_amount]';
+        $custom_price = 'pivot[custom_price]';
+        $custom_formula = 'pivot[custom_formula]';
+        $custom_total = 'pivot[custom_total]';
+        if (!isset($fields->old_total->value)) {
+            if (!empty($fields->$amount->value)) {
+                $amount = $fields->$amount->value;
+                $fields->old_total->value = $fields->total->value - $amount;
+            } else if (!empty($fields->$custom_amount->value)) {
+                $amount = $fields->$custom_amount->value;
+                $fields->old_total->value = $fields->total->value + $amount;
+            } else {
+                $fields->old_total->value = $fields->total->value + 0;
+            }
+        }
         if (!empty($fields->length->value) &&
             !empty($fields->total_weight->value) &&
             !empty($fields->$amount->value) &&
@@ -75,5 +116,31 @@ class Material extends Model
             $fields->$total->value = $sheet->getCell('C1')->getCalculatedValue();
             unset($sheet);
         }
+        if (!empty($fields->length->value) &&
+            !empty($fields->total_weight->value) &&
+            !empty($fields->$custom_amount->value) &&
+            !empty($fields->$custom_price->value) &&
+            !empty($fields->$custom_formula->value)) {
+            // Calculate using excel format
+            $spreadsheet = new Spreadsheet();
+            $sheet = $spreadsheet->getActiveSheet();
+            $sheet->setCellValue('A1', $fields->length->value);
+            $sheet->setCellValue('A2', $fields->total_weight->value);
+            $sheet->setCellValue('A3', $fields->$custom_amount->value);
+            $sheet->setCellValue('A4', $fields->$custom_price->value);
+            $sheet->setCellValue('C1', '=' . $fields->$custom_formula->value);
+            $fields->$custom_total->value = $sheet->getCell('C1')->getCalculatedValue();
+            unset($sheet);
+        }
+        if (!empty($fields->$amount->value)) {
+            $fields->total->value = $fields->old_total->value + $fields->$amount->value;
+        }
+        if (!empty($fields->$custom_amount->value)) {
+            $fields->total->value = $fields->old_total->value - $fields->$custom_amount->value;
+        }
     }
+
+//    public function beforeDelete(){
+//        $this->storages->detach();
+//    }
 }

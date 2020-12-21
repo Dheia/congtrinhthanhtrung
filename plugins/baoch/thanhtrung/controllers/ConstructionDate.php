@@ -3,6 +3,7 @@
 use Backend\Classes\Controller;
 use Backend\Facades\Backend;
 use BackendMenu;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 use Vdomah\Excel\Classes\Excel;
 use Baoch\Thanhtrung\Models\ConstructionDateExportExcel;
@@ -29,6 +30,21 @@ class ConstructionDate extends Controller
         BackendMenu::setContext('Baoch.Thanhtrung', 'cong-trinh');
     }
 
+    public function onRelationButtonRemove($id) {
+        $input = Input::all();
+        if (!empty($input['_relation_field']) && $input['_relation_field'] == 'materials_pivot') {
+            $cd = \Baoch\Thanhtrung\Models\ConstructionDate::find($id);
+            foreach (array_unique($input['checked']) as $v) {
+                $materials = $cd->materials()->where('id', $v)->get();
+                foreach ($materials as $material) {
+                    $material->total += $material->pivot->custom_amount;
+                    $material->save();
+                }
+            }
+        }
+
+        return $this->onRelationManageRemove();
+    }
 
     public function onExportExcel()
     {

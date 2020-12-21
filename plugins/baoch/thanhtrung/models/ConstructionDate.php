@@ -31,11 +31,12 @@ class ConstructionDate extends Model
         'materials' => [
             'Baoch\Thanhtrung\Models\Material',
             'table' => 'baoch_thanhtrung_construction_date_material',
+            'pivot' => ['custom_price', 'custom_amount', 'custom_formula', 'custom_total', 'description'],
         ],
         'materials_pivot' => [
             'Baoch\Thanhtrung\Models\Material',
             'table' => 'baoch_thanhtrung_construction_date_material',
-            'pivot' => ['custom_price', 'custom_amount', 'description'],
+            'pivot' => ['custom_price', 'custom_amount', 'custom_formula', 'custom_total', 'description'],
             'pivotModel' => 'Baoch\Thanhtrung\Models\ConstructionDateMaterial',
         ],
         'employees' => [

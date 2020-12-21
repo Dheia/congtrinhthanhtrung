@@ -1,14 +1,73 @@
 fields:
-    pivot[custom_amount]:
-        label: 'Số lượng'
+fields:
+    code:
+        label: 'Mã vật liệu'
         span: auto
+        readOnly: 1
+        type: text
+    name:
+        label: Tên
+        span: auto
+        readOnly: 1
+        type: text
+    material_type_id:
+        label: 'Loại vật liệu'
+        showSearch: true
+        span: auto
+        disabled: 1
+        type: dropdown
+    color:
+        label: 'Màu sắc'
+        span: auto
+        readOnly: 1
+        type: text
+    length:
+        label: 'Độ dài (A1)'
+        span: auto
+        readOnly: 1
         type: number
-    pivot[custom_price]:
-        label: 'Giá'
+    total_weight:
+        label: 'Trọng lượng (A2)'
         span: auto
+        readOnly: 1
         type: number
     pivot[description]:
         label: 'Mô tả'
         size: small
         span: full
         type: textarea
+    'pivot[custom_amount]':
+        label: 'Số lượng (A3)'
+        span: auto
+        type: number
+    'pivot[custom_price]':
+        label: 'Giá (A4)'
+        span: auto
+        type: number
+    'pivot[custom_formula]':
+        label: 'Công thức'
+        span: auto
+        default: 'A1*A2*A3*A4'
+        type: text
+    'pivot[custom_total]':
+        label: 'Tổng tiền'
+        span: auto
+        type: number
+        default: '0'
+        readOnly: 1
+        dependsOn:
+            - pivot[custom_amount]
+            - pivot[custom_price]
+            - pivot[custom_formula]
+    old_total:
+        label: 'Tồn kho'
+        span: auto
+        readOnly: 1
+        type: number
+    total:
+        label: 'Tồn kho'
+        span: auto
+        readOnly: 1
+        type: number
+        dependsOn:
+            - pivot[custom_amount]

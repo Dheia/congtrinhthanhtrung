@@ -29,3 +29,15 @@ fields:
         size: small
         span: full
         type: textarea
+    old_total:
+        label: 'Tồn kho - Số lượng'
+        span: auto
+        readOnly: 1
+        hidden: 1
+        type: number
+    total:
+        label: 'Tồn kho'
+        span: right
+        default: 0
+        readOnly: 1
+        type: number

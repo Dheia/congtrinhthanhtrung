@@ -23,11 +23,16 @@ columns:
         sortable: true
     length:
         label: 'Chiều dài'
-        type: text
+        type: number
         searchable: true
         sortable: true
     total_weight:
         label: 'Trọng lượng'
-        type: text
+        type: number
+        searchable: true
+        sortable: true
+    total:
+        label: 'Số lượng tồn'
+        type: number
         searchable: true
         sortable: true

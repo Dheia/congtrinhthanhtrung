@@ -53,3 +53,15 @@ fields:
             - pivot[amount]
             - pivot[price]
             - pivot[formula]
+    old_total:
+        label: 'Tồn kho - Số lượng'
+        span: auto
+        readOnly: 1
+        type: number
+    total:
+        label: 'Tồn kho'
+        span: auto
+        readOnly: 1
+        type: number
+        dependsOn:
+            - pivot[amount]

@@ -1,12 +1,12 @@
 columns:
     code:
-        label: 'Mã vật liệu'
+        label: Mã
         type: text
         searchable: true
         sortable: true
     name:
         label: 'Tên vật liệu'
-        type: text
+        type: number
         searchable: true
         sortable: true
     material_type_id:
@@ -16,13 +16,18 @@ columns:
         sortable: true
         select: name
         relation: material_type
-    pivot[custom_amount]:
-        label: 'Số lượng nhập'
+    color:
+        label: 'Màu sắc'
         type: text
         searchable: true
         sortable: true
-    total_weight:
-        label: 'Trọng lượng'
+    length:
+        label: 'Chiều dài'
+        type: text
+        searchable: true
+        sortable: true
+    pivot[custom_amount]:
+        label: 'Số lượng nhập'
         type: text
         searchable: true
         sortable: true

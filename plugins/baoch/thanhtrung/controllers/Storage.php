@@ -2,6 +2,7 @@
 
 use Backend\Classes\Controller;
 use BackendMenu;
+use Illuminate\Support\Facades\Input;
 
 class Storage extends Controller
 {
@@ -19,5 +20,21 @@ class Storage extends Controller
     {
         parent::__construct();
         BackendMenu::setContext('Baoch.Thanhtrung', 'cong-trinh', 'storage');
+    }
+
+    public function onRelationButtonRemove($id) {
+        $input = Input::all();
+        if (!empty($input['_relation_field']) && $input['_relation_field'] == 'materials_pivot') {
+            $storage = \Baoch\Thanhtrung\Models\Storage::find($id);
+            foreach (array_unique($input['checked']) as $v) {
+                $materials = $storage->materials()->where('id', $v)->get();
+                foreach ($materials as $material) {
+                    $material->total -= $material->pivot->amount;
+                    $material->save();
+                }
+            }
+        }
+
+        return $this->onRelationManageRemove();
     }
 }

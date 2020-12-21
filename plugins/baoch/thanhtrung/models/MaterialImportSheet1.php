@@ -24,16 +24,39 @@ class MaterialImportSheet1 implements ToModel, WithStartRow
     public function model(array $row)
     {
         if (!empty($row[0])) {
-            $martialCheck = Material::where('code', $row[1])->first();
-            if ($martialCheck) {
-                return null;
+            $length = empty(trim($row[3])) ? 0 : number_format(trim($row[3]), 2, '.', '');
+            $total_weight = empty(trim($row[4])) ? 0 : number_format(trim($row[4]), 2, '.','');
+            $amount = empty(trim($row[5])) ? 0 : number_format(str_replace(['.', ',', ' '], '', trim($row[5])) ,0,'.', '');
+            $price = empty(trim($row[7])) ? 0 : number_format(str_replace(['.', ',', ' '], '', trim($row[7])),0, '.', '');
+            //print_r($length . ' - ' . $total_weight . ' - ' . $amount . ' - ' . $price);die;
+            // Get storage
+            $cDate = (new \DateTime())->setTimezone(new \DateTimeZone('Asia/Ho_Chi_Minh'))->format('Y-m-d');
+            $storage = Storage::where('date', $cDate)->first();
+            if (!$storage) {
+                $storage = new Storage();
+                $storage->date = $cDate;
+                $storage->save();
             }
-            $material = new Material;
-            $material->code = $row[1];
-            $material->name = $row[2];
-            $material->length = $row[3];
-            $material->total_weight = $row[4];
-            $material->material_type_id = 3;
+            // Get martial
+            $material = Material::where('code', $row[1])->first();
+            if (!$material) {
+                $material = new Material;
+                $material->code = $row[1];
+                $material->name = $row[2];
+                $material->length = $length;
+                $material->total_weight = $total_weight;
+                $material->material_type_id = 3;
+                $material->save();
+            }
+            // Create pivot
+            if ($storage->materials->count() == 0) {
+                $storage->materials()->attach($material,
+                    ['amount'=> $amount,
+                        'price'=> $price,
+                        'formula' => "A1*A2*A3*A4",
+                        'total' => $length * $total_weight * $amount * $price]);
+                $material->total += $amount;
+            }
 
             return $material;
         }
